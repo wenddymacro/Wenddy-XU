@@ -80,6 +80,9 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 ## DSGE
 
 # Short Course
+## 2019年4月     《DSGE简介》1天课程     北京大学经济学院
+## 2019年7月     《DSGE建模与编程入门》5天短期课程    中国人民大学经济学院
+## 2019年11月    《动态随机一般均衡DSGE模型及量化宏观经济》    国家外汇管理局
 
 
 
