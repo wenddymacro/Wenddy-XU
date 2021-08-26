@@ -16,10 +16,6 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Teaching
-## Green Finance and Macroeconomics
-## DSGE
-
 - Bulleted
 - List
 
@@ -32,6 +28,11 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+
+# Teaching
+## Green Finance and Macroeconomics
+## DSGE
 
 # Short Course
 
