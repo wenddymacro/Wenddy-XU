@@ -21,7 +21,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 **2019**
 
-[A Baseline Medium-Scale NK DSGE Model for Policy Analysis](https://mpra.ub.uni-muenchen.de/93167/1/MPRA_paper_93167.pdf)[Dynare codes](https://forum.dynare.org/t/note-on-a-medium-scale-dsge-model-with-fiscal-and-monetary-policy/13559)
+[A Baseline Medium-Scale NK DSGE Model for Policy Analysis](https://mpra.ub.uni-muenchen.de/93167/1/MPRA_paper_93167.pdf)[[Dynare codes]](https://forum.dynare.org/t/note-on-a-medium-scale-dsge-model-with-fiscal-and-monetary-policy/13559)
 
 
 
