@@ -117,8 +117,9 @@ Sheppard, K. (2012). Introduction to python for econometrics, statistics and dat
 
 Nick Huntington-Klein（2021）. [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/).
 
+[DID的最新进展](https://github.com/asjadnaqvi/DiD)
 
-课程大纲}
+课程大纲
 
 1、什么是计量经济学
 
