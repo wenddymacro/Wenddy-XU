@@ -85,6 +85,108 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 2019-05:[DSGE建模与编程入门](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E5%85%A5%E9%97%A8-%E8%AE%B8%E6%96%87%E7%AB%8B20190118-20.pdf)[[课程大纲]](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-2019%E5%B9%B45%E6%9C%88%E7%89%88.docx)
 
 
+## 应用计量经济学讲稿
+
+[应用计量经济学讲稿](https://github.com/wenddymacro/AppliedEconometrics/blob/main/AppliedEconometrics.pdf) 
+
+本课程试图引导本科生或一年级研究生了解当代计量经济学的现状，并掌握一些常用的微观计量与宏观计量理论与操作，学习Stata与通用编程语言的一些基本知识。
+
+本课程要求你们已经熟悉初级宏微观经济学知识，并对多重微积分、概率论、线性代数和数理统计有一定程度的理解。相关数学与统计基础可参见许文立和许坤的微信公众号”宏观经济研学会“。如果你们曾经学习过一些计量经济学的知识，上本课程效果更佳。但计量知识并不是必需的。推荐一本非常好的本科计量教科书：Wooldridge (2015)、Stock and Watson （2015）。
+
+参考书目及资料
+
+本课程并没有单一的指定参考书目，而是参考许多很好的计量经济学课本。如果你们想更深入学习计量经济学，下面这些书目和资料会很有帮助。
+
+(1)书目：
+
+Wooldridge, J. M. (2015). Introductory econometrics: A modern approach. Nelson Education.
+
+Stock, James H., and Mark W. Watson. Introduction to Econometrics(updated-3ed). Addison-Wesley, 2015.
+
+Brockwell, P. J., and Davis, R. A. (2013). Time series: theory and methods. Springer Science and Business Media.
+
+Angrist, J. D., and Pischke, J. S. (2008). Mostly harmless econometrics: An empiricist's companion. Princeton university press.
+
+Angrist, J. D., and Pischke, J. S. (2014). Mastering'metrics: The path from cause to effect. Princeton University Press.
+
+陈强. 2015,计量经济学及Stata应用,高等教育出版社
+
+Romano, F., Phillips, D., van Hattem, R. (2016). Python: Journey from Novice to Expert. Packt Publishing Ltd.
+
+Sheppard, K. (2012). Introduction to python for econometrics, statistics and data analysis. Self-published, University of Oxford, version, 2.
+
+Nick Huntington-Klein（2021）. [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/).
+
+
+课程大纲}
+
+1、什么是计量经济学
+
+  （1）经济数据
+
+  （2）经济理论
+
+2、预备知识：概率与统计基础
+
+（1）概率论
+
+（2）统计概论
+
+3、一元回归
+
+（1）估计
+
+（2）假设检验、置信区间和虚拟变量
+
+（3）Stata介绍（一）
+
+4、多元回归
+
+5、经济学经验研究评价
+
+（1）内部有效性和外部有效性框架
+
+（2）内部有效性评价
+
+a.遗漏变量偏误
+
+b.回归函数误设
+
+c.测量误差
+
+d.样本选择偏误
+
+e.反向因果
+
+f.异方差和系列相关
+
+6、面板数据模型
+
+7、IV法
+
+8、随机控制实验
+
+（1）DID
+
+（2）RD
+
+9、时间序列分析
+
+10、极简CGE：Excel版
+
+11、极简DSGE：罗宾逊漂流记
+
+12、Python在计量经济学中的应用入门（选讲）
+
+（1）Python简介
+
+（2）Python爬虫技术入门（数据收集）
+
+（3）Python在计量中的应用入门（回归与IV）
+
+13、如何讲好经济学故事：流行的计量形式
+
+
 # Short Course
 ## 2019
 
