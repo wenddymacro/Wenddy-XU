@@ -87,12 +87,12 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ## DSGE入门
 
-2019-05:[DSGE建模与编程入门](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E5%85%A5%E9%97%A8-%E8%AE%B8%E6%96%87%E7%AB%8B20190118-20.pdf)[[课程大纲]](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-2019%E5%B9%B45%E6%9C%88%E7%89%88.docx)
+2019-05:[《DSGE建模与编程入门》](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E5%85%A5%E9%97%A8-%E8%AE%B8%E6%96%87%E7%AB%8B20190118-20.pdf)[【课程大纲】](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-2019%E5%B9%B45%E6%9C%88%E7%89%88.docx)
 
 
 ## 应用计量经济学讲稿
 
-[应用计量经济学讲稿](https://github.com/wenddymacro/AppliedEconometrics/blob/main/AppliedEconometrics.pdf) [配套数据和dofile](https://github.com/wenddymacro/paper/tree/main/%E7%BB%8F%E5%85%B8DID%20dofile)
+[《应用计量经济学讲稿》](https://github.com/wenddymacro/AppliedEconometrics/blob/main/AppliedEconometrics.pdf) [【配套数据和dofile】](https://github.com/wenddymacro/paper/tree/main/%E7%BB%8F%E5%85%B8DID%20dofile)
 
 本课程试图引导本科生或一年级研究生了解当代计量经济学的现状，并掌握一些常用的微观计量与宏观计量理论与操作，学习Stata与通用编程语言的一些基本知识。
 
