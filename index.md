@@ -92,7 +92,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ## 应用计量经济学讲稿
 
-[应用计量经济学讲稿](https://github.com/wenddymacro/AppliedEconometrics/blob/main/AppliedEconometrics.pdf) 
+[应用计量经济学讲稿](https://github.com/wenddymacro/AppliedEconometrics/blob/main/AppliedEconometrics.pdf) [配套数据和dofile]（https://github.com/wenddymacro/paper/tree/main/%E7%BB%8F%E5%85%B8DID%20dofile）
 
 本课程试图引导本科生或一年级研究生了解当代计量经济学的现状，并掌握一些常用的微观计量与宏观计量理论与操作，学习Stata与通用编程语言的一些基本知识。
 
