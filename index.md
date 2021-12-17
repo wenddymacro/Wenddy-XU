@@ -47,13 +47,31 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 **Abstract**:This note documents a DSGE model of Climate Change. I extend the NK model with geophisical variables, such as greenhouse gas emissions, the carbon cycle, radiative forcing, and climate change. In this model, I specify five different climate policy regimes: no policy, cap, intensive, tax, and mandate.
 
-[**“双支柱”政策协调搭配与货币政策选择]()(with 叶莉和王苗)[《金融监管研究》forthcoming][Dynare codes]
+[**“双支柱”政策协调搭配与货币政策选择](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDAUTO&filename=JRJG202108006&uniplatform=NZKPT&v=_1dFCS8eVgqAu-i-wAyNUMQy1DlRDz-f1V8tpJi-ean7Pe_cxsqVAuBcFWiCCSRb)(with 叶莉和王苗)[《金融监管研究》，2021，08][Dynare codes]
 
 **摘要**：本文构建包含金融部门和“双支柱”调控政策的DSGE模型，系统比较不同的货币政策与宏观审慎政策的组合在应对不同外部冲击时稳定经济和金融效应差异以及福利差异。研究发现：一是相较于单一货币政策，纳入宏观审慎政策的“双支柱”调控框架具有更好的金融稳定效应；二是“双支柱”调控框架下不同货币政策在应对货币冲击时稳定经济和金融市场的渠道与效应存在显著区别，价格型货币政策通过利率传导渠道有助于维护金融市场的稳定，但在支撑实体经济发展方面效果不及数量型货币政策，然而运用数量型货币政策支撑实体经济发展时，要防范可能出现的金融风险隐患；三是“双支柱”政策协调搭配能够有效增加社会福利，其中价格型货币政策与宏观审慎政策协调配合社会福利损失最小。这意味着“双支柱”框架的调控效果依赖于货币政策工具的选择。因此，现阶段央行应进一步厘清不同货币政策与宏观审慎政策协调配合作用机理以实现稳定实体经济增长和防范系统性金融风险的目的。
 
 **关键字**：货币政策；宏观审慎政策；金融稳定
 
+[**政府债务高杠杆、金融稳定与“双支柱”调控框架](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=TZYJ202111002&uniplatform=NZKPT&v=X1a_JyG-1bCYcGvVqJxCJ3Lz1R8aooVGhUCrNdwXCzAxmNye-2VjukLHTNKsc8RQ)(with 叶莉和王苗)[《投资研究》，2021，40（11）][Dynare codes]
+
+**摘要**：本文通过BVAR和DSGE模型,从实证和理论角度厘清政府高杠杆引致金融风险的传导机制,系统比较不同的宏观审慎政策与货币政策协调配合在应对财政冲击时稳定金融的效力。研究发现:政府高杠杆通过商业银行资产负债表渠道削弱了金融市场的稳健性;紧盯政府信贷增速与名义GDP增速的宏观审慎政策能够应对财政冲击;"双支柱"调控框架能够防范政府债务高杠杆引致的金融风险。据此,我国应尽快建立债务—金融风险传导隔离机制;针对不同性质和来源的金融风险,恰当选择宏观审慎政策;进一步健全货币政策和宏观审慎政策协调配合的"双支柱"调控框架。 
+
+**关键字**：	政府债务高杠杆;“双支柱”调控框架;金融稳定
+
+
 **间接税减税与劳动收入份额——来自“营改增”政策的证据**(with 彭飞)[《经济学(季刊)》forthcoming]
+
+
+[**交叠的秘密：经济学领域交叠DID导读与实践指导](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3979616)[[Slides]](https://github.com/wenddymacro/secret_Staggered_DID/blob/main/%E4%BA%A4%E5%8F%A0%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf)
+
+**摘要**：Difference in Differences (DID) design is the most important causal identification method in the main contribution of the Nobel Prize in Economics in 2021—natural experiment. And more and more researchers use the setting of staggered DID, but the recent DID econometric literature shows that the use of two-way fixed effects (TWFE) estimator under time-varying treatment may produce bias, or even get the opposite Causal effect. Based on this, this article reviews the traditional DID design, briefly describes the decomposition of staggered DID estimators, bias diagnosic, the latest robust DID estimator, and then uses a simulation data and two published economic papers (Beck, Levine, and Levkov (2010, JF); Cao Qingfeng (2020, China Industrial Economy)) to illustrate some necessary/best elements of staggered DID in practice.
+**关键字**：Difference in Differences; time-varying treatment; heterogeneous treatment effect; Bacon decomposition; robust estimator
+
+[**智慧城市的建设提高企业绿色技术创新了吗？](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3982807)
+
+**摘要**：The 14th Five-Year-Plan is an important period for China to enter the construction of ecological civilization,smart cities and the green technology innovation of enterprise will provide necessary technical support for achieving the goals of carbon peak and carbon neutralization.However, whether the construction of smart cities can improve the green technology innovation of enterprises still needs to be further explored.This paper takes the smart pilot city proposed in 2012 as a quasi-natural experiment, uses the data of green patents of listed enterprises from 2008 to 2019, empirically tests the impact of the smart city pilot construction on green technology innovation of listed enterprises in China by using time point did method for time-varying treatment, and tests the heterogeneity according to patent type, enterprise property right and geographical location.The results show that:(1)The construction of smart cities can significantly improve the level of green technology innovation of enterprises, and after a series of robustness tests, this conclusion still holds; (2) The results of Bancon decomposition and negative weight diagnosis show that the effect error of estimation is small, and the green innovation effect is also steady to the robust estimator;(3)The impact of smart cities pilot on enterprises applying for green patents varies with different types of patents, among which the impact on green utility model patents is greater;(4)The role of smart cities in green technological innovation of state-owned enterprises is more obvious than that of non-state-owned enterprises,and compared with the central and western regions, the smart city is easier to trigger green technology innovation of enterprises in the eastern region.
+**关键字**：smart cities ;green technology innovation;staggered DID
 
 
 ## Work in progress
@@ -98,99 +116,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 本课程要求你们已经熟悉初级宏微观经济学知识，并对多重微积分、概率论、线性代数和数理统计有一定程度的理解。相关数学与统计基础可参见许文立和许坤的微信公众号”宏观经济研学会“。如果你们曾经学习过一些计量经济学的知识，上本课程效果更佳。但计量知识并不是必需的。推荐一本非常好的本科计量教科书：Wooldridge (2015)、Stock and Watson （2015）。
 
-参考书目及资料
 
-本课程并没有单一的指定参考书目，而是参考许多很好的计量经济学课本。如果你们想更深入学习计量经济学，下面这些书目和资料会很有帮助。
-
-(1)书目：
-
-Wooldridge, J. M. (2015). Introductory econometrics: A modern approach. Nelson Education.
-
-Stock, James H., and Mark W. Watson. Introduction to Econometrics(updated-3ed). Addison-Wesley, 2015.
-
-Brockwell, P. J., and Davis, R. A. (2013). Time series: theory and methods. Springer Science and Business Media.
-
-Angrist, J. D., and Pischke, J. S. (2008). Mostly harmless econometrics: An empiricist's companion. Princeton university press.
-
-Angrist, J. D., and Pischke, J. S. (2014). Mastering'metrics: The path from cause to effect. Princeton University Press.
-
-陈强. 2015,计量经济学及Stata应用,高等教育出版社
-
-Romano, F., Phillips, D., van Hattem, R. (2016). Python: Journey from Novice to Expert. Packt Publishing Ltd.
-
-Sheppard, K. (2012). Introduction to python for econometrics, statistics and data analysis. Self-published, University of Oxford, version, 2.
-
-Nick Huntington-Klein（2021）. [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/).
-
-[DID的最新进展](https://github.com/asjadnaqvi/DiD)
-
-课程大纲
-
-1、什么是计量经济学
-
-  （1）经济数据
-
-  （2）经济理论
-
-2、预备知识：概率与统计基础
-
-（1）概率论
-
-（2）统计概论
-
-3、一元回归
-
-（1）估计
-
-（2）假设检验、置信区间和虚拟变量
-
-（3）Stata介绍（一）
-
-4、多元回归
-
-5、经济学经验研究评价
-
-（1）内部有效性和外部有效性框架
-
-（2）内部有效性评价
-
-a.遗漏变量偏误
-
-b.回归函数误设
-
-c.测量误差
-
-d.样本选择偏误
-
-e.反向因果
-
-f.异方差和系列相关
-
-6、面板数据模型
-
-7、IV法
-
-8、随机控制实验
-
-（1）DID
-
-（2）RD
-
-9、时间序列分析
-
-10、极简CGE：Excel版
-
-11、极简DSGE：罗宾逊漂流记
-
-12、Python在计量经济学中的应用入门（选讲）
-
-（1）Python简介
-
-（2）Python爬虫技术入门（数据收集）
-
-（3）Python在计量中的应用入门（回归与IV）
-
-13、如何讲好经济学故事：流行的计量形式
 
 
 # Short Course
