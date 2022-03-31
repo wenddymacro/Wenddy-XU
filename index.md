@@ -132,6 +132,13 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 2021年11-12月    《绿色金融与DSGE建模及dynare编程》     华中师范大学金融系
 
+## 2022
+
+2022年3月31号    《DSGE及dynare和Stata编程导论》     北京大学经济学院
+
+[《DSGE及dynare和Stata编程导论》](https://github.com/wenddymacro/DSGE_pku/blob/main/DSGE%20intro_PKU%20Econ.%20School.pdf)[【dynare和stata代码】](https://github.com/wenddymacro/DSGE_pku/tree/main/code%20and%20data)
+
+
 # CIMERS
 
 ### Jekyll Themes
