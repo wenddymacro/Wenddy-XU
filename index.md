@@ -117,7 +117,19 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 本课程要求你们已经熟悉初级宏微观经济学知识，并对多重微积分、概率论、线性代数和数理统计有一定程度的理解。相关数学与统计基础可参见许文立和许坤的微信公众号”宏观经济研学会“。如果你们曾经学习过一些计量经济学的知识，上本课程效果更佳。但计量知识并不是必需的。推荐一本非常好的本科计量教科书：Wooldridge (2015)、Stock and Watson （2015）。
 
 [11种交叠处理DID稳健估计量](https://github.com/wenddymacro/eleven_estimators_staggered_DID)
+For using and plotting multiple DiD packages in Stata, the event_plot command (ssc install event_plot, replace) by Kirill Borusyak  is highly recommended. It estimates and combines results from five different estimators. Example of how to do event study plots using different packages is given in the five_estimators_example.do dofile on [Github](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.do)
 
+The event_plot usage example has been extended three:
+（1）David Burgherr  has a dofile on [dropbox](https://www.dropbox.com/s/p5i94ryf4h9o335/five_estimators_example_adapted.do?dl=0).
+（2）Pietro Santoleri  has a dofile  that plots seven different estimators on [Github](https://github.com/pietrosantoleri/staggered_did).
+ (3) Albert Alex Zevelev has a dofile  that plots seven different estimators w/o heterogeneous treatment effects on [Github](https://github.com/azev77/Compare-DiD-Estimators).
+
+Wenli Xu has extended Compare-DiD-Estimators to include jwdid, IFE, MC  and SDID. The dofile plots eleven different estimators on [Github](https://wenddymacro.github.io/Wenddy-XU/).
+
+NOTE: In addition to the above DID estimators, there are flexpaneldid(Eva Dettmann, Alexander Giebler, Antje Weyh (2020). Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration. IWH Discussion Papers No. 3/2020.) and staggered_stata(Jonathan Roth , Pedro H.C. Sant'Anna  (2021). Efficient Estimation for Staggered Rollout Designs) in STATA to address the heterogeneous treatment effects on  staggered DID. But the former yields a single ATT estimator, and the latter is used with R, so they are not included in my dofile.
+
+2022-03-28
+Anhui University & Simon Fraser university
 
 # Short Course
 ## 2019
