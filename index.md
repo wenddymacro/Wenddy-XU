@@ -116,7 +116,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 本课程要求你们已经熟悉初级宏微观经济学知识，并对多重微积分、概率论、线性代数和数理统计有一定程度的理解。相关数学与统计基础可参见许文立和许坤的微信公众号”宏观经济研学会“。如果你们曾经学习过一些计量经济学的知识，上本课程效果更佳。但计量知识并不是必需的。推荐一本非常好的本科计量教科书：Wooldridge (2015)、Stock and Watson （2015）。
 
-
+[11种交叠处理DID稳健估计量](https://github.com/wenddymacro/eleven_estimators_staggered_DID)
 
 
 # Short Course
