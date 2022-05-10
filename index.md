@@ -142,7 +142,7 @@ Anhui University & Simon Fraser university
 # 安徽大学课程
 ## 2022
 
-### 《应用计量经济学slides》(https://github.com/wenddymacro/AppliedEconometrics/blob/main/%E5%BA%94%E7%94%A8%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6slides.pdf)
+### [《应用计量经济学slides》](https://github.com/wenddymacro/AppliedEconometrics/blob/main/%E5%BA%94%E7%94%A8%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6slides.pdf)
 
 # Short Course
 ## 2019
