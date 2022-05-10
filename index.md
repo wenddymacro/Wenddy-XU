@@ -74,10 +74,13 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 **关键字**：smart cities ;green technology innovation;staggered DID
 
 
+## 2022
+
+[**节能减排财政政策综合时点城市促进了企业转型升级吗？]()（with 田淑英，孙磊，范子英）
+**摘要**：在政策实施和退出的情形下，传统TWFE DID估计量和大部分异质性处理效应稳健估计量都不适应。本文研究了
+
+
 ## Work in progress
-
-
-
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -135,6 +138,11 @@ NOTE: In addition to the above DID estimators, there are flexpaneldid(Eva Dettma
 2022-03-28
 
 Anhui University & Simon Fraser university
+
+# 安徽大学课程
+## 2022
+
+### 《应用计量经济学slides》(https://github.com/wenddymacro/AppliedEconometrics/blob/main/%E5%BA%94%E7%94%A8%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6slides.pdf)
 
 # Short Course
 ## 2019
