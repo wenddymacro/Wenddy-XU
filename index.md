@@ -76,6 +76,41 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 ## 2022
 
+[**欧元区量化宽松措施对中国宏观经济与金融的影响研究]()(with 梁冰) [**replication files]()
+
+**摘要**：国内国际双循环新格局的形成要求厘清国际经济与政策不确定性对中国经济与金融的影响。本章基于全球向量自回归模型（Global Vector Autoregression Model）对欧元区量化宽松措施影响中国宏观经济运行的效果及其机制进行了实证分析。结果表明：（1）欧元区量化宽松措施主要影响中国通货膨胀；（2）货币市场短期利率、债券市场长期利率、股票市场股票价格指数以及信贷市场非金融机构信贷余额增速等对欧元区量化宽松措施单位冲击的响应均不超过0.05个单位；（3）外汇市场实际有效汇率以及通货膨胀预期等对欧元区量化宽松措施单位冲击的最大响应均不超过0.005个单位；（4）就国际关联机制而言，欧洲量化宽松措施会通过影响欧元区和美国货币市场短期利率、日本商品市场通货膨胀以及英国商品市场产出增速等影响中国通货膨胀，对中国宏观经济与金融市场其它领域的影响相对有限。
+
+[** The Multi-Dimension Shocks，Ocean Carbon Sinks and  The Environmental Outcome in China——A simulation analysis based on DSGE-DICE approach]()(with Zhenhao Wei et al) [**replication files]()
+
+**Abstract**: Low-carbon development requires the joint efforts of the "carbon reduction" and the "carbon sink increase" sides. The research of ocean carbon sinks is beneficial to carbon emission reduction and ocean economic development. This paper innovatively constructs a multi-sectoral DSGE model with marine carbon sinks, attempting to provide policy suggestions for marine economic development and carbon emission policy choices. The conclusions are as follows: (1) The output growth of heterogeneous technology shocks is apparent, while the environmental effects of the carbon tax and carbon quota shocks are significant. (2) When the ocean carbon sink capacity is improved, the output effect of the heterogeneity shock is further enhanced, and the increase in the proportion of ocean output value has a more noticeable effect on the improvement of the environment. (3) When the two coefficients increase simultaneously, the welfare level of each exogenous shock increases, which realizes the dual effect of economy and ecology. From an empirical perspective, the results can reflect the multiple effects of marine carbon sinks on ecology, economy, and society, which have essential reference value for developing the marine carbon sink industry and upgrading marine industrial structure.
+
+**Key words**: ocean carbon sink; carbon neutrality; DSGE; DICE; carbon emission reduction
+
+[** Climate Disaster, Macroeconomic Dynamics and Climate Policy]()(with Dan Huang and L. Guo) [**replication files]()
+
+**Abstract**: This paper examines the effect of a temporary climate disaster shock on macroeconomic  dynamics and analyze the role of climate policy, including emission cap policy, emission tax policy, and intensity target policy. However, few literatures have focused on the core mechanisms affecting climate change which alter the output of economies and the environment. We extend the NK  model with geophysical variables, such as greenhouse gas emissions, the carbon cycle, radiative forcing, and climate change. This model considers shocks to the possibility of disaster risk, the different policies, and the monetary policy and plots the impulse response of environmental and economic variables following the above shocks.
+
+**Key words**: DSGE; climate change; climate policy
+
+[** Do VAT Cuts Help Stabilize Employment?Evidence from China’s VAT Rate Reform]()(with Xiufen Liu et al) [**replication files]()
+
+**Abstract**: We developed a simple model to study the influence of China’s added-value tax (VAT) rate reform on employment, and it delivers important information about how monopoly and unskilled labor will enhance the substitution of non-labor factors for labor. Taking China’s VAT rate reform as a quasi-natural experiment, we examined the model predictions with a difference-in-differences (DID) approach. We found that China’s VAT rate reform has a negative employment effect and that the decrease in the relative price of non-labor inputs to labor serves as an important channel through which non-labor factors squeeze labor out. Reducing the degree of market monopoly and improving the skill level of labor can effectively mitigate the adverse impact of the reform on employment.
+
+**Keywords**: VAT rate; employment; tax reduction; DID model
+
+[**The Consumption Response to Minimum Wage Hikes: New Evidence from Chinese Households]()(with Zhangxu Xia et al) [**replication files]()
+
+**Abstract**: This paper examines the effects of minimum wage increases on household behavior. Using data from the China Family Panel Studies (CFPS) between 2012 and 2018, we find a significant positive effect of minimum wages on household consumption. Our results are robust to heterogeneous treatment effects and IV strategy. Mechanism analysis suggests that improving future income expectations and reducing precautionary motives rather than borrowing constraints help explain the effect. Then, our heterogeneity analysis shows that raising the minimum wage increases consumption both for minimum wage families and non-minimum wage families, but has no significant effect on improving consumption structure for minimum wage families. This paper provides a more comprehensive understanding of the economic effects of minimum wages and offers significant debate on the relevance of the minimum wage towards consumption-led growth.
+
+**Keywords**: Minimum Wage; Household Consumption; Future Income Expectation; Precautionary Saving; Consumption Structure
+
+
+
+[**科技和金融结合如何促进城市绿色发展？—基于促进科技金融结合试点政策的经验研究]()(with 孙安妮) [**replication files]()
+
+**摘要**：以2011年实施的促进科技和金融结合试点政策为契机，采用2004—2019年284个地级及以上城市的面板数据，构建渐进型双重差分实证评估科技金融结合对城市绿色发展的直接影响和间接影响。研究发现：总体而言，获批为科技金融结合试点可以直接提升城市绿色全要素生产率，且这种效应呈现一定动态性。作用机制检验结果表明，科技金融结合试点通过提高技术创新和产业结构升级两大途径间接改善城市绿色发展水平，产业结构合理化影响效应尚未显现。异质性分析发现，科技金融结合试点对城市绿色发展的促进作用在行政等级高、资源依赖性强的城市表现不够明显。
+
+
 [**节能减排财政政策综合时点城市促进了企业转型升级吗？]()（with 田淑英，孙磊，范子英） [**replication files]()
 
 **摘要**：在政策实施和退出的情形下，传统TWFE DID估计量和大部分异质性处理效应稳健估计量都不适应。
