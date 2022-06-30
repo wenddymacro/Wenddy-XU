@@ -115,6 +115,8 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 **摘要**：在政策实施和退出的情形下，传统TWFE DID估计量和大部分异质性处理效应稳健估计量都不适应。
 
+[**Environmental Regulation and ﻿Energy Efficiency: Evidence from Daily Penalty Policy in China]()（with kai hu; Dandan Li; Daqian Shi）R&R in Journal of Regulatory Economics [**replication files]()
+
 [**事件研究的秘密：从传统DID到面板事件研究设计导读与实践建议](https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf)(with 孙磊) [**replication files]()
 
 **摘要**：近年来，面板事件研究是自然实验或政策评估领域最受关注的研究设计方法，它也是传统DID研究设计的扩展。但目前，无论是计量经济学教材，还是应用性论文都较少关注DID事件研究的假设、时变协变量与估计方法的错配带来的估计量和推断偏误。本文基于已有的DID事件研究理论文献成果，首先回顾DID事件研究的核心假设和时变协变量可能带来的偏误；然后利用曹清峰（2020）的国家级新区对区域经济增长的拉动效应为例，说明与假设和时变协变量限制相一致的检验方法和估计方法；紧接着，以我国碳排放权交易试点为准自然实验，应用上述检验和估计方法来分析碳排放权交易对企业融资约束的影响。最后，提出一些实践建议和进一步研究方向。
