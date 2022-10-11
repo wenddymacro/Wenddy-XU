@@ -111,19 +111,16 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 **摘要**：以2011年实施的促进科技和金融结合试点政策为契机，采用2004—2019年284个地级及以上城市的面板数据，构建渐进型双重差分实证评估科技金融结合对城市绿色发展的直接影响和间接影响。研究发现：总体而言，获批为科技金融结合试点可以直接提升城市绿色全要素生产率，且这种效应呈现一定动态性。作用机制检验结果表明，科技金融结合试点通过提高技术创新和产业结构升级两大途径间接改善城市绿色发展水平，产业结构合理化影响效应尚未显现。异质性分析发现，科技金融结合试点对城市绿色发展的促进作用在行政等级高、资源依赖性强的城市表现不够明显。
 
 
-[**节能减排财政政策综合时点城市促进了企业转型升级吗？]()（with 田淑英，孙磊，范子英） [**replication files]()
-
-**摘要**：在政策实施和退出的情形下，传统TWFE DID估计量和大部分异质性处理效应稳健估计量都不适应。
 
 [**Environmental Regulation and ﻿Energy Efficiency: Evidence from Daily Penalty Policy in China]()（with kai hu; Dandan Li; Daqian Shi）R&R in Journal of Regulatory Economics [**replication files]()
 
-[**事件研究的秘密：从传统DID到面板事件研究设计导读与实践建议](https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf)(with 孙磊) [**replication files]()
+[**事件研究的秘密：从传统DID到面板事件研究设计导读与实践建议](https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf) (with 孙磊) [**replication files]()
 
 **摘要**：近年来，面板事件研究是自然实验或政策评估领域最受关注的研究设计方法，它也是传统DID研究设计的扩展。但目前，无论是计量经济学教材，还是应用性论文都较少关注DID事件研究的假设、时变协变量与估计方法的错配带来的估计量和推断偏误。本文基于已有的DID事件研究理论文献成果，首先回顾DID事件研究的核心假设和时变协变量可能带来的偏误；然后利用曹清峰（2020）的国家级新区对区域经济增长的拉动效应为例，说明与假设和时变协变量限制相一致的检验方法和估计方法；紧接着，以我国碳排放权交易试点为准自然实验，应用上述检验和估计方法来分析碳排放权交易对企业融资约束的影响。最后，提出一些实践建议和进一步研究方向。
 关键词：面板事件研究；DID；时变协变量；假设检验
 
 
-[**绿色低碳发展目标下财政政策促进企业转型升级研究——来自“节能减排财政政策综合示范城市”试点的证据]([https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf](https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf))(with 田淑英、孙磊和范子英) [**replication files](https://github.com/wenddymacro/green-fiscal-policy-effect)
+[**绿色低碳发展目标下财政政策促进企业转型升级研究——来自“节能减排财政政策综合示范城市”试点的证据](https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDAUTO&filename=CZYJ202208007&uniplatform=NZKPT&v=zSOMuuj0AzX1UhdPx1f9gnj_f-eBxlj_VvDMcVH6P5Zq26ji90N5yokMVuPKQTOD) (with 田淑英、孙磊和范子英) [**replication files](https://github.com/wenddymacro/green-fiscal-policy-effect)
 
 **摘要**：本文基于“节能减排财政政策综合示范城市”的准自然实验，运用多时点DID和多期多个体DID等方法，实证检验了绿色低碳发展目标下财政政策对企业转型升级的影响。研究结果表明，示范城市试点对企业转型升级有促进作用，表现为生产效率优化、技术绿色创新和产品附加值提升。机制检验发现，示范城市试点通过财政激励的“资源配置效应”和环境规制的“创新补偿效应”改善企业内部融资环境，加快研发创新和数字化转型。进一步研究显示，地方政府财政压力、环保重视程度以及企业所有制和所处行业类型会对政策实施产生差异化影响。最后，从促进财政政策与环境政策协同联动、打好激励约束“组合拳”以及政策精准化实施等方面提出政策建议。
 关键词：绿色低碳发展;财政政策;企业转型升级;异质性处理效应;政策退出;
