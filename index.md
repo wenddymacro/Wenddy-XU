@@ -123,7 +123,10 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 关键词：面板事件研究；DID；时变协变量；假设检验
 
 
+[**绿色低碳发展目标下财政政策促进企业转型升级研究——来自“节能减排财政政策综合示范城市”试点的证据]([https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf](https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf))(with 田淑英、孙磊和范子英) [**replication files](https://github.com/wenddymacro/green-fiscal-policy-effect)
 
+**摘要**：本文基于“节能减排财政政策综合示范城市”的准自然实验，运用多时点DID和多期多个体DID等方法，实证检验了绿色低碳发展目标下财政政策对企业转型升级的影响。研究结果表明，示范城市试点对企业转型升级有促进作用，表现为生产效率优化、技术绿色创新和产品附加值提升。机制检验发现，示范城市试点通过财政激励的“资源配置效应”和环境规制的“创新补偿效应”改善企业内部融资环境，加快研发创新和数字化转型。进一步研究显示，地方政府财政压力、环保重视程度以及企业所有制和所处行业类型会对政策实施产生差异化影响。最后，从促进财政政策与环境政策协同联动、打好激励约束“组合拳”以及政策精准化实施等方面提出政策建议。
+关键词：绿色低碳发展;财政政策;企业转型升级;异质性处理效应;政策退出;
 
 ## Work in progress
 
