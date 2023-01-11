@@ -208,6 +208,10 @@ Anhui University & Simon Fraser university
 
 [《DSGE及dynare和Stata编程导论》](https://github.com/wenddymacro/DSGE_pku/blob/main/DSGE%20intro_PKU%20Econ.%20School.pdf)[【dynare和stata代码】](https://github.com/wenddymacro/DSGE_pku/tree/main/code%20and%20data)
 
+2022年9月-12月    《DID应用文献解读》     安徽大学经济学院
+
+[《DID应用文献解读》](https://github.com/wenddymacro/notes_on-DID-Applications/blob/main/22%E8%B4%A2%E6%94%BF%E6%B1%87%E6%8A%A5%E6%89%8B%E7%A8%BF.pdf)[【stata代码】](https://github.com/wenddymacro/notes_on-DID-Applications)
+
 
 # CIMERS
 
