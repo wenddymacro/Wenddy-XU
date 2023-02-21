@@ -86,7 +86,7 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 **Key words**: ocean carbon sink; carbon neutrality; DSGE; DICE; carbon emission reduction
 
-[** Climate Disaster, Macroeconomic Dynamics and Climate Policy]()(with Dan Huang and L. Guo) [**replication files]()
+[** Climate Disaster, Macroeconomic Dynamics and Climate Policy](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4182212)(with Dan Huang and L. Guo) [**replication files]()
 
 **Abstract**: This paper examines the effect of a temporary climate disaster shock on macroeconomic  dynamics and analyze the role of climate policy, including emission cap policy, emission tax policy, and intensity target policy. However, few literatures have focused on the core mechanisms affecting climate change which alter the output of economies and the environment. We extend the NK  model with geophysical variables, such as greenhouse gas emissions, the carbon cycle, radiative forcing, and climate change. This model considers shocks to the possibility of disaster risk, the different policies, and the monetary policy and plots the impulse response of environmental and economic variables following the above shocks.
 
@@ -125,6 +125,12 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 **摘要**：本文基于“节能减排财政政策综合示范城市”的准自然实验，运用多时点DID和多期多个体DID等方法，实证检验了绿色低碳发展目标下财政政策对企业转型升级的影响。研究结果表明，示范城市试点对企业转型升级有促进作用，表现为生产效率优化、技术绿色创新和产品附加值提升。机制检验发现，示范城市试点通过财政激励的“资源配置效应”和环境规制的“创新补偿效应”改善企业内部融资环境，加快研发创新和数字化转型。进一步研究显示，地方政府财政压力、环保重视程度以及企业所有制和所处行业类型会对政策实施产生差异化影响。最后，从促进财政政策与环境政策协同联动、打好激励约束“组合拳”以及政策精准化实施等方面提出政策建议。
 关键词：绿色低碳发展;财政政策;企业转型升级;异质性处理效应;政策退出;
 
+[**货币化融资的财政刺激效果研究——兼论财政政策与货币政策的协调**](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKibYlV5Vjs7iJTKGjg9uTdeTsOI_ra5_XQSMwjKOyvyDhWcpoqWxxUs71y5cxKe1aHtLPv5HWY6z&uniplatform=NZKPT)(with 王文甫)[**replication files](https://github.com/wenddymacro/monetary-and-fiscal-policy)
+
+**摘要**：在我国经济下行压力加大的背景下，常规经济刺激政策实施空间逐渐缩小，需要积极探索和创新非常规经济刺激政策。基于标准宏观金融模型引入财政部门和央行互动，对传统平衡预算、买断债券和短期借款下财政支出刺激效果进行比较的研究表明，在经济平稳运行时期，央行买断政府债券的融资方式更能保持经济持续稳定发展；在货币政策受限时期，央行短期借款的货币化融资方式既可以提振经济，也可以促进金融市场流动性；在经济下行时期，使用央行短期借款来为财政支出融资可能带来较大的金融风险。因此，政策空间缩小和经济下行时，要更加注重财政政策与货币政策的协调配合与联动，更加注重跨周期和逆周期宏观调控政策有机结合。
+关键词：	财政赤字货币化;财政乘数;央行短期借款;央行买断债券;
+
+
 ## Work in progress
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -154,6 +160,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 ## DSGE入门
 
 2019-05:[《DSGE建模与编程入门》](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E5%85%A5%E9%97%A8-%E8%AE%B8%E6%96%87%E7%AB%8B20190118-20.pdf)[【课程大纲】](https://github.com/wenddymacro/Wenddy-XU/blob/main/%E8%AF%BE%E7%A8%8B%E6%9D%90%E6%96%99/DSGE%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-2019%E5%B9%B45%E6%9C%88%E7%89%88.docx)
+
 
 
 ## 应用计量经济学讲稿
