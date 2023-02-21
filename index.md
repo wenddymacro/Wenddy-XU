@@ -125,11 +125,20 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 **摘要**：本文基于“节能减排财政政策综合示范城市”的准自然实验，运用多时点DID和多期多个体DID等方法，实证检验了绿色低碳发展目标下财政政策对企业转型升级的影响。研究结果表明，示范城市试点对企业转型升级有促进作用，表现为生产效率优化、技术绿色创新和产品附加值提升。机制检验发现，示范城市试点通过财政激励的“资源配置效应”和环境规制的“创新补偿效应”改善企业内部融资环境，加快研发创新和数字化转型。进一步研究显示，地方政府财政压力、环保重视程度以及企业所有制和所处行业类型会对政策实施产生差异化影响。最后，从促进财政政策与环境政策协同联动、打好激励约束“组合拳”以及政策精准化实施等方面提出政策建议。
 关键词：绿色低碳发展;财政政策;企业转型升级;异质性处理效应;政策退出;
 
-[**货币化融资的财政刺激效果研究——兼论财政政策与货币政策的协调**](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKibYlV5Vjs7iJTKGjg9uTdeTsOI_ra5_XQSMwjKOyvyDhWcpoqWxxUs71y5cxKe1aHtLPv5HWY6z&uniplatform=NZKPT)(with 王文甫)[**replication files](https://github.com/wenddymacro/monetary-and-fiscal-policy)
+[**货币化融资的财政刺激效果研究——兼论财政政策与货币政策的协调**](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKibYlV5Vjs7iJTKGjg9uTdeTsOI_ra5_XQSMwjKOyvyDhWcpoqWxxUs71y5cxKe1aHtLPv5HWY6z&uniplatform=NZKPT)(with 王文甫)[**replication files**](https://github.com/wenddymacro/monetary-and-fiscal-policy)
 
 **摘要**：在我国经济下行压力加大的背景下，常规经济刺激政策实施空间逐渐缩小，需要积极探索和创新非常规经济刺激政策。基于标准宏观金融模型引入财政部门和央行互动，对传统平衡预算、买断债券和短期借款下财政支出刺激效果进行比较的研究表明，在经济平稳运行时期，央行买断政府债券的融资方式更能保持经济持续稳定发展；在货币政策受限时期，央行短期借款的货币化融资方式既可以提振经济，也可以促进金融市场流动性；在经济下行时期，使用央行短期借款来为财政支出融资可能带来较大的金融风险。因此，政策空间缩小和经济下行时，要更加注重财政政策与货币政策的协调配合与联动，更加注重跨周期和逆周期宏观调控政策有机结合。
 关键词：	财政赤字货币化;财政乘数;央行短期借款;央行买断债券;
 
+# 书籍
+
+## [量化宏观经济学导论及Julia 应用：从基础计算方法到前沿领域](https://detail.tmall.com/item.htm?abbucket=20&id=697717641388&ns=1&spm=a230r.1.14.3.565c3cf0U5qmWb&skuId=5112229702629)[**replication files**](https://github.com/wenddymacro/-julia-)
+
+**内容提要**：本书将向大家呈现数值方法，尤其是量化宏观经济学中使用的一些数值方法：解确定性和随机性方程组、对数线性化、模拟DSGE 模型、动态规划，以及包含扰动法、投影法和参数化期望法在内的多个高级数值方法。本书也涵盖了最近的异质性代理人模型中使用的一些工具、方法。本书最大的优势在于理论和实践应用的平衡。虽然，上述一些著作也包含理论的应用，但是本书首次向读者介绍了利用Julia 的代码来计算数值。Julia 是一种免费、开源的编程语言。通过Julia，读者可以迅速学习如何解宏观经济模型，并用编程语言来实现定量分析。
+
+## [推动绿色发展：中国环境宏观经济理论与政策研究](https://detail.tmall.com/item.htm?abbucket=20&id=696547552265&ns=1&spm=a230r.1.14.16.d49634ffRm0uoB)[**replication files**](https://github.com/wenddymacro/Tui-Dong-lve-Se-Fa-Zhan)
+
+**内容提要**：
 
 ## Work in progress
 
