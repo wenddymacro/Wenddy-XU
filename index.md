@@ -60,15 +60,12 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 **关键字**：	政府债务高杠杆;“双支柱”调控框架;金融稳定
 
 
-**间接税减税与劳动收入份额——来自“营改增”政策的证据**(with 彭飞)[《经济学(季刊)》forthcoming]
-
-
-[**交叠的秘密：经济学领域交叠DID导读与实践指导](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3979616)[[Slides]](https://github.com/wenddymacro/secret_Staggered_DID/blob/main/%E4%BA%A4%E5%8F%A0%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf)
+[**交叠的秘密：经济学领域交叠DID导读与实践指导**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3979616)[[Slides]](https://github.com/wenddymacro/secret_Staggered_DID/blob/main/%E4%BA%A4%E5%8F%A0%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf)
 
 **摘要**：Difference in Differences (DID) design is the most important causal identification method in the main contribution of the Nobel Prize in Economics in 2021—natural experiment. And more and more researchers use the setting of staggered DID, but the recent DID econometric literature shows that the use of two-way fixed effects (TWFE) estimator under time-varying treatment may produce bias, or even get the opposite Causal effect. Based on this, this article reviews the traditional DID design, briefly describes the decomposition of staggered DID estimators, bias diagnosic, the latest robust DID estimator, and then uses a simulation data and two published economic papers (Beck, Levine, and Levkov (2010, JF); Cao Qingfeng (2020, China Industrial Economy)) to illustrate some necessary/best elements of staggered DID in practice.
 **关键字**：Difference in Differences; time-varying treatment; heterogeneous treatment effect; Bacon decomposition; robust estimator
 
-[**智慧城市的建设提高企业绿色技术创新了吗？](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3982807)（with 田淑英，孙安妮，夏梦丽）   
+[**智慧城市的建设提高企业绿色技术创新了吗？**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3982807)（with 田淑英，孙安妮，夏梦丽）   
 
 **摘要**：The 14th Five-Year-Plan is an important period for China to enter the construction of ecological civilization,smart cities and the green technology innovation of enterprise will provide necessary technical support for achieving the goals of carbon peak and carbon neutralization.However, whether the construction of smart cities can improve the green technology innovation of enterprises still needs to be further explored.This paper takes the smart pilot city proposed in 2012 as a quasi-natural experiment, uses the data of green patents of listed enterprises from 2008 to 2019, empirically tests the impact of the smart city pilot construction on green technology innovation of listed enterprises in China by using time point did method for time-varying treatment, and tests the heterogeneity according to patent type, enterprise property right and geographical location.The results show that:(1)The construction of smart cities can significantly improve the level of green technology innovation of enterprises, and after a series of robustness tests, this conclusion still holds; (2) The results of Bancon decomposition and negative weight diagnosis show that the effect error of estimation is small, and the green innovation effect is also steady to the robust estimator;(3)The impact of smart cities pilot on enterprises applying for green patents varies with different types of patents, among which the impact on green utility model patents is greater;(4)The role of smart cities in green technological innovation of state-owned enterprises is more obvious than that of non-state-owned enterprises,and compared with the central and western regions, the smart city is easier to trigger green technology innovation of enterprises in the eastern region.
 **关键字**：smart cities ;green technology innovation;staggered DID
@@ -76,11 +73,11 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 ## 2022
 
-[**欧元区量化宽松措施对中国宏观经济与金融的影响研究]()(with 梁冰) [**replication files]()
+[**欧元区量化宽松措施对中国宏观经济与金融的影响研究**](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKibYlV5Vjs7iJTKGjg9uTdeTsOI_ra5_XVURpKangpZewDcWGJHxyySS6CtrNgR_l0cETvj6xIO7&uniplatform=NZKPT)(with 梁冰) [**replication files]()
 
 **摘要**：国内国际双循环新格局的形成要求厘清国际经济与政策不确定性对中国经济与金融的影响。本章基于全球向量自回归模型（Global Vector Autoregression Model）对欧元区量化宽松措施影响中国宏观经济运行的效果及其机制进行了实证分析。结果表明：（1）欧元区量化宽松措施主要影响中国通货膨胀；（2）货币市场短期利率、债券市场长期利率、股票市场股票价格指数以及信贷市场非金融机构信贷余额增速等对欧元区量化宽松措施单位冲击的响应均不超过0.05个单位；（3）外汇市场实际有效汇率以及通货膨胀预期等对欧元区量化宽松措施单位冲击的最大响应均不超过0.005个单位；（4）就国际关联机制而言，欧洲量化宽松措施会通过影响欧元区和美国货币市场短期利率、日本商品市场通货膨胀以及英国商品市场产出增速等影响中国通货膨胀，对中国宏观经济与金融市场其它领域的影响相对有限。
 
-[** The Multi-Dimension Shocks，Ocean Carbon Sinks and  The Environmental Outcome in China——A simulation analysis based on DSGE-DICE approach]()(with Zhenhao Wei et al) [**replication files]()
+[** The Multi-Dimension Shocks，Ocean Carbon Sinks and  The Environmental Outcome in China——A simulation analysis based on DSGE-DICE approach**]()(with Zhenhao Wei et al) [**replication files]()
 
 **Abstract**: Low-carbon development requires the joint efforts of the "carbon reduction" and the "carbon sink increase" sides. The research of ocean carbon sinks is beneficial to carbon emission reduction and ocean economic development. This paper innovatively constructs a multi-sectoral DSGE model with marine carbon sinks, attempting to provide policy suggestions for marine economic development and carbon emission policy choices. The conclusions are as follows: (1) The output growth of heterogeneous technology shocks is apparent, while the environmental effects of the carbon tax and carbon quota shocks are significant. (2) When the ocean carbon sink capacity is improved, the output effect of the heterogeneity shock is further enhanced, and the increase in the proportion of ocean output value has a more noticeable effect on the improvement of the environment. (3) When the two coefficients increase simultaneously, the welfare level of each exogenous shock increases, which realizes the dual effect of economy and ecology. From an empirical perspective, the results can reflect the multiple effects of marine carbon sinks on ecology, economy, and society, which have essential reference value for developing the marine carbon sink industry and upgrading marine industrial structure.
 
@@ -106,7 +103,7 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 
 
-[**科技和金融结合如何促进城市绿色发展？—基于促进科技金融结合试点政策的经验研究]()(with 孙安妮) [**replication files]()
+[**科技和金融结合如何促进城市绿色发展？—基于促进科技金融结合试点政策的经验研究**]()(with 孙安妮) [**replication files]()
 
 **摘要**：以2011年实施的促进科技和金融结合试点政策为契机，采用2004—2019年284个地级及以上城市的面板数据，构建渐进型双重差分实证评估科技金融结合对城市绿色发展的直接影响和间接影响。研究发现：总体而言，获批为科技金融结合试点可以直接提升城市绿色全要素生产率，且这种效应呈现一定动态性。作用机制检验结果表明，科技金融结合试点通过提高技术创新和产业结构升级两大途径间接改善城市绿色发展水平，产业结构合理化影响效应尚未显现。异质性分析发现，科技金融结合试点对城市绿色发展的促进作用在行政等级高、资源依赖性强的城市表现不够明显。
 
@@ -114,7 +111,7 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 [**Environmental Regulation and ﻿Energy Efficiency: Evidence from Daily Penalty Policy in China]()（with kai hu; Dandan Li; Daqian Shi）R&R in Journal of Regulatory Economics [**replication files]()
 
-[**事件研究的秘密：从传统DID到面板事件研究设计导读与实践建议](https://github.com/wenddymacro/secret_event_study/blob/main/%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86-%E8%AE%B8%E6%96%87%E7%AB%8B_slides.pdf) (with 孙磊) [**replication files]()
+[**事件研究的秘密：从传统DID到面板事件研究设计导读与实践建议**](https://github.com/wenddymacro/DID_Event_Study/blob/main/DID%E4%BA%8B%E4%BB%B6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%A7%98%E5%AF%86.pdf) [**replication files]()
 
 **摘要**：近年来，面板事件研究是自然实验或政策评估领域最受关注的研究设计方法，它也是传统DID研究设计的扩展。但目前，无论是计量经济学教材，还是应用性论文都较少关注DID事件研究的假设、时变协变量与估计方法的错配带来的估计量和推断偏误。本文基于已有的DID事件研究理论文献成果，首先回顾DID事件研究的核心假设和时变协变量可能带来的偏误；然后利用曹清峰（2020）的国家级新区对区域经济增长的拉动效应为例，说明与假设和时变协变量限制相一致的检验方法和估计方法；紧接着，以我国碳排放权交易试点为准自然实验，应用上述检验和估计方法来分析碳排放权交易对企业融资约束的影响。最后，提出一些实践建议和进一步研究方向。
 关键词：面板事件研究；DID；时变协变量；假设检验
@@ -149,6 +146,13 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 **摘要**：因果推断已经成为经济学经验研究的主要目的，其中，合成控制法和双重差分法是最流⾏的两类因果推断⽅法，它们各具优势，也有不⾜。Arkhangelsky et al.（2021，AER）提出了⼀种新的因果推断估计量——合成双重差分估计量，兼具了合成控制法和双重差分法的优势。本⽂将合成双重差分估计量扩展到动态环境，得到处理后每⼀期的处理效应，类似于事件研究。为了说明动态合成双重差分估计量的用处和重要性，本⽂基于刘友⾦和曾小明（2018，中国⼯业经济，11:98-116）的数据来重新分析我国房产税试点对产业转移的效应。结果显示：（1）动态合成双重差分估计量与合成控制和双重差分估计量存在明显差异，且对两个传统估计量的效应识别起到了补充作用；（2）进⼀步完善原⽂结论，房产税的开征总体上加快了地区产业结构“腾笼换鸟”的动态趋势，特别是对重庆的⼯业、服务业的相对产值和
 相对就业率均有“促增”作用，但是抑制了上海的产业结构升级，产业结构的调整更多依赖于低端服务业的发展。最后，给出了⼀些实践应用的建议。
+
+[**双重差分法的最新理论进展与经验研究新趋势**]()[**replication files**]()
+[摘  要］在因果推断经验研究中，双重差分法是历史最悠久、最流行的方法。最近几年，双重差分法的计量理论取得了许多新的突破性进展，国外的经验研究已经开始应用这些最新成果来评估政策效应，而国内学界则稍有滞后，因此，讨论双重差分法的最新理论进展，并综述经验研究的新趋势，对于讲好中国经验故事尤为重要。本文首先介绍双重差分法的基本假设与原理，其次重点讨论异质性处理效应的最新理论进展及稳健估计量，再次阐述传统处理前趋势检验的方式，以及违反平行趋势假设的敏感性分析方法，最后讨论了混淆因子偏误的相关理论进展和应用方法。此外，本文还以国家级新区设立的政策实验为例，从实践的角度给出双重差分法的应用新趋势。
+［关键词］双重差分 异质性处理效应 平行趋势 混淆因子
+
+[**市场激励型环境规制与能源消费结构转型——来自中国碳排放权交易试点的经验证据**]()(with 孙磊)[**replication files**]()
+
 
 
 # 书籍
