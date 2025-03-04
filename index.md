@@ -178,6 +178,21 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 关键词: 处理配置机制；双重差分法；平行趋势；应用指南
 
+[**资本市场向好预期能缓解总需求不足吗？**](https://kns.cnki.net/kcms2/article/abstract?v=fNwONIwGMRJIOc5bKXyfHmrN4hIeo90w12QKHr08kNl6HtnTg8E2qwqoK-QeWBWnIelXaUbKWSFbj_2XfMz9nbJbKaGyIV2MFWJNQTVroC0t1gOcUxvgd_yYtnNcwZW6neMsYPbvutCRFbbWZgnFHfGJykJBGfpdFh2lhN1MJSntLBPff5dX8B1btcysUY9a&uniplatform=NZKPT&language=CHS) [[**replication files**](https://github.com/wenddymacro/NK-with-digit-Yuan)]
+
+**摘要**：本文通过构建具有企业进入和退出股票市场特征的宏观金融模型，研究股票市场预期冲击对中国宏观经济的影响，并定量分析冲击的内生不确定性传播渠道及其对中国“双支柱”调控框架的作用。研究发现，投资者的股价上涨预期冲击能够帮助缓解总需求不足的问题，同时，盯住股价的“双支柱”宏观审慎调控框架能够平抑股价预期冲击带来的总需求波动。
+
+关键词：	股票市场;股价预期冲击;内生不确定性;宏观审慎政策;
+
+## 2025 
+[**Patronage and pollution**](https://www.sciencedirect.com/science/article/abs/pii/S009506962400189X)
+
+**Abstract**:Patronage network has varying effects based on different promotional incentives. Our study explores these dynamics using China’s pollution emissions as a backdrop. We discover that integrating environmental protection into performance evaluations transforms patronage from increasing to reducing pollution. However, this positive shift in environmental impact occurs at the expense of economic growth. Our findings illuminate the significant effectiveness of China’s pollution control and demonstrate how formal institutions shape the results of informal systems.
+
+[**Television exposure in early childhood and subsequent cognitive outcomes: Evidence from rural China**](https://www.sciencedirect.com/science/article/abs/pii/S016726812400492X?dgcid=coauthor)
+
+**Abstract**: This study estimates the effect of television exposure in early childhood on subsequent cognitive outcomes using data from rural China. Exploiting the variations in the year of television access at the village level and children’s birth year, this study employs an extended two-way fixed effects (ETWFE) approach introduced by Wooldridge (2021). Baseline estimates, which are robust to staggered treatments, show that cognitive scores at ages 10–15 are significantly improved by full television exposure in early childhood (ages 0-5). Furthermore, there is suggestive evidence that this effect could be explained by the direct channel through which television enhances general knowledge level.
+
 
 # 书籍
 
@@ -276,6 +291,10 @@ Anhui University & Simon Fraser university
 2022年9月-12月    《DID应用文献解读》     安徽大学经济学院
 
 [《DID应用文献解读》](https://github.com/wenddymacro/notes_on-DID-Applications/blob/main/22%E8%B4%A2%E6%94%BF%E6%B1%87%E6%8A%A5%E6%89%8B%E7%A8%BF.pdf)[【stata代码】](https://github.com/wenddymacro/notes_on-DID-Applications)
+
+## 2025
+
+[**《当代DID方法：内生性问题——从理论到实践》**](https://github.com/wenddymacro/Modern_DID)
 
 
 # CIMERS
