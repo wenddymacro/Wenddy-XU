@@ -296,6 +296,8 @@ Anhui University & Simon Fraser university
 
 [**《当代DID方法：内生性问题——从理论到实践》**](https://github.com/wenddymacro/Modern_DID)
 
+[**《Dynare的新功能与编程》**](https://github.com/wenddymacro/Dynare_NewToolbox)
+
 
 # CIMERS
 
