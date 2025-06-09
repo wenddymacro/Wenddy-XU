@@ -184,6 +184,17 @@ You can use the [editor on GitHub](https://github.com/wenddymacro/Wenddy-XU/edit
 
 关键词：	股票市场;股价预期冲击;内生不确定性;宏观审慎政策;
 
+[**Baby Boom**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4788180)[with Lianzhou Tang and Erlong He]
+
+**Abstract**:Utilizing manually collected data from gazetteers of over 2,000 counties, we explored the impact of the Household Responsibility System (HRS) on China’s fertility rate within a triple-difference framework. Our findings reveal a significant boost in fertility rates attributable to the HRS, an effect that persists after accounting for the one-child policy, fertilizer use growth, medical standards, and economic openness. The fertility-promoting impact was primarily evident from the second child onwards, although the HRS significantly reduced children’s educational attainment. Post-HRS, mandatory contraceptive practices notably declined, while desires to marry remained largely unaffected. Our study substantially elucidates the population boom experienced in the 1980s.
+
+[**STATE RETREAT: DECOLLECTIVIZATION LAND REFORM AND FERTILITY TRANSITION**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5286176)[with Lianzhou Tang]
+
+**Abstract**:This paper investigates how an unprecedented de-collectivization land reform transformed fertility. Initiated around the 1970s in China, the reform significantly boosted agricultural productivity while simultaneously weakening government control. Using a compiled dataset from historical records, our study shows a substantial increase in birth rates after the land reform. This surge is attributed to the disruption of stringent birth control policies, the fulfillment of childbearing costs, and a shift in human capital investment patterns. Our work enriches the understanding of bottom-up institutional reforms and their far-reaching societal consequences.
+
+
+
+
 ## 2025 
 [**Patronage and pollution**](https://www.sciencedirect.com/science/article/abs/pii/S009506962400189X)
 
