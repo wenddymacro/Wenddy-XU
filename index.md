@@ -10,13 +10,13 @@
 <section class="hero card" data-lang="zh">
   <h1>许文立 | Wenli Xu</h1>
   <p class="subtitle">欢迎访问我的个人主页</p>
-  <p>我专注于中国宏观经济政策、DSGE建模与AI经济学研究，欢迎交流合作。</p>
+  <p>我专注于中国宏观经济政策、DSGE建模与AI经济学研究，也对因果推断（尤其是DID及其经验应用）感兴趣，欢迎交流合作。</p>
 </section>
 
 <section class="hero card" data-lang="en">
   <h1>Wenli Xu</h1>
   <p class="subtitle">Welcome to my homepage</p>
-  <p>I focus on China's macroeconomic policy, DSGE modeling, and AI economics. Collaboration is welcome.</p>
+  <p>I focus on China's macroeconomic policy, DSGE modeling, and AI economics, and I am also interested in causal inference, especially DID and empirical applications. Collaboration is welcome.</p>
 </section>
 
 <section class="card" data-lang="zh">
@@ -25,6 +25,7 @@
     <li>中国宏观经济政策</li>
     <li>DSGE建模</li>
     <li>AI经济学</li>
+    <li>因果推断（尤其是DID及其经验应用）</li>
   </ul>
 </section>
 
@@ -34,6 +35,7 @@
     <li>China's Macroeconomic Policy</li>
     <li>DSGE Modeling</li>
     <li>AI Economics</li>
+    <li>Causal Inference (especially DID and empirical applications)</li>
   </ul>
 </section>
 
