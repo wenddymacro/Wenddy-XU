@@ -43,6 +43,7 @@
 
 <section class="card" data-lang="zh">
   <h2>代表成果（节选）</h2>
+  <p>以下论文聚焦中国宏观经济、因果推断与政策评估，涵盖DSGE建模、DID及相关经验研究方法，持续关注现实政策问题与识别策略的结合。</p>
   <ul>
     <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S009506962400189X">Patronage and pollution (JEEM, 2025)</a></li>
     <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S016726812400492X?dgcid=coauthor">Television exposure in early childhood and subsequent cognitive outcomes (JEBO, 2025)</a></li>
@@ -57,6 +58,7 @@
 
 <section class="card" data-lang="en">
   <h2>Selected Publications</h2>
+  <p>These papers focus on China's macroeconomy, causal inference, and policy evaluation, with work spanning DSGE modeling, DID, and applied empirical methods.</p>
   <ul>
     <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S009506962400189X">Patronage and pollution (JEEM, 2025)</a></li>
     <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S016726812400492X?dgcid=coauthor">Television exposure in early childhood and subsequent cognitive outcomes (JEBO, 2025)</a></li>
@@ -71,6 +73,7 @@
 
 <section class="card" data-lang="zh">
   <h2>Packages</h2>
+  <p>这些工具包面向政策评估与因果推断实证工作，覆盖Python与Stata环境，便于开展DID设计检验、趋势评估与稳健性分析。</p>
   <ul>
     <li>Python package: <a href="https://github.com/gorgeousfish/lwdid-py">lwdid-py</a></li>
     <li>Stata packages: <a href="https://github.com/gorgeousfish/pretest">pretest</a>, <a href="https://github.com/gorgeousfish/equitrends">equitrends</a>, <a href="https://github.com/gorgeousfish/diddesign">diddesign</a></li>
@@ -79,6 +82,7 @@
 
 <section class="card" data-lang="en">
   <h2>Packages</h2>
+  <p>These packages support applied causal inference and policy evaluation in Python and Stata, especially for DID design checks, trend diagnostics, and robustness analysis.</p>
   <ul>
     <li>Python package: <a href="https://github.com/gorgeousfish/lwdid-py">lwdid-py</a></li>
     <li>Stata packages: <a href="https://github.com/gorgeousfish/pretest">pretest</a>, <a href="https://github.com/gorgeousfish/equitrends">equitrends</a>, <a href="https://github.com/gorgeousfish/diddesign">diddesign</a></li>
