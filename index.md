@@ -71,7 +71,7 @@
   <h2>链接与联系</h2>
   <ul>
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
-    <li><a href="https://github.com/wenddymacro/Wenddy-XU">Homepage Repository</a></li>
+    <li><a href="[澳门城市大学金融学院个人主页](https://fof.cityu.edu.mo/list-13/844)">Homepage Repository</a></li>
     <li><a href="mailto:wlxu@cityu.edu.mo">wlxu@cityu.edu.mo</a></li>
   </ul>
 </section>
@@ -80,7 +80,7 @@
   <h2>Links & Contact</h2>
   <ul>
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
-    <li><a href="https://github.com/wenddymacro/Wenddy-XU">Homepage Repository</a></li>
+    <li><a href="[FOF page](https://fof.cityu.edu.mo/list-13/844)">Homepage Repository</a></li>
     <li><a href="mailto:wlxu@cityu.edu.mo">wlxu@cityu.edu.mo</a></li>
   </ul>
 </section>
