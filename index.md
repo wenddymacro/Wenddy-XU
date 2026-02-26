@@ -3,6 +3,10 @@
   <button id="btn-en" onclick="setLang('en')">EN</button>
 </div>
 
+<div class="avatar-wrap">
+  <img class="avatar" src="./IMG_2337.JPG" alt="Wenli Xu avatar">
+</div>
+
 <section class="hero card" data-lang="zh">
   <h1>许文立 | Wenli Xu</h1>
   <p class="subtitle">欢迎访问我的个人主页</p>
@@ -101,6 +105,21 @@ body {
   justify-content: flex-end;
   gap: 8px;
   margin: 12px 0 18px;
+}
+
+.avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 14px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 4px solid #ffffff;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
 }
 
 .lang-switch button {
