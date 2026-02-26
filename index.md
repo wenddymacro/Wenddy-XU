@@ -70,6 +70,22 @@
 </section>
 
 <section class="card" data-lang="zh">
+  <h2>Packages</h2>
+  <ul>
+    <li>Python package: <a href="https://github.com/gorgeousfish/lwdid-py">lwdid-py</a></li>
+    <li>Stata packages: <a href="https://github.com/gorgeousfish/pretest">pretest</a>, <a href="https://github.com/gorgeousfish/equitrends">equitrends</a>, <a href="https://github.com/gorgeousfish/diddesign">diddesign</a></li>
+  </ul>
+</section>
+
+<section class="card" data-lang="en">
+  <h2>Packages</h2>
+  <ul>
+    <li>Python package: <a href="https://github.com/gorgeousfish/lwdid-py">lwdid-py</a></li>
+    <li>Stata packages: <a href="https://github.com/gorgeousfish/pretest">pretest</a>, <a href="https://github.com/gorgeousfish/equitrends">equitrends</a>, <a href="https://github.com/gorgeousfish/diddesign">diddesign</a></li>
+  </ul>
+</section>
+
+<section class="card" data-lang="zh">
   <h2>链接与联系</h2>
   <ul>
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
