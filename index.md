@@ -73,6 +73,7 @@
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
     <li><a href="https://github.com/wenddymacro/Wenddy-XU">Homepage Repository</a></li>
     <li><a href="mailto:wlxu@cityu.edu.mo">wlxu@cityu.edu.mo</a></li>
+    <li><a href="https://fof.cityu.edu.mo/en/list-13/692">澳门城市大学个人主页（英文）</a></li>
   </ul>
 </section>
 
@@ -82,6 +83,7 @@
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
     <li><a href="https://github.com/wenddymacro/Wenddy-XU">Homepage Repository</a></li>
     <li><a href="mailto:wlxu@cityu.edu.mo">wlxu@cityu.edu.mo</a></li>
+    <li><a href="https://fof.cityu.edu.mo/en/list-13/692">My City University of Macau Profile (EN)</a></li>
   </ul>
 </section>
 <style>
