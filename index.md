@@ -73,7 +73,6 @@
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
     <li><a href="https://github.com/wenddymacro/Wenddy-XU">Homepage Repository</a></li>
     <li><a href="mailto:wlxu@cityu.edu.mo">wlxu@cityu.edu.mo</a></li>
-    <li><a href="https://www.cityu.edu.mo/faculty-of-finance/">澳门城市大学金融学院主页</a></li>
   </ul>
 </section>
 
@@ -83,7 +82,6 @@
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
     <li><a href="https://github.com/wenddymacro/Wenddy-XU">Homepage Repository</a></li>
     <li><a href="mailto:wlxu@cityu.edu.mo">wlxu@cityu.edu.mo</a></li>
-    <li><a href="https://www.cityu.edu.mo/faculty-of-finance/">City University of Macau - Faculty of Finance</a></li>
   </ul>
 </section>
 <style>
