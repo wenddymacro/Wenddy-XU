@@ -166,6 +166,60 @@
 </section>
 
 <section class="card" data-lang="zh">
+  <h2>书籍</h2>
+  <h3>专著</h3>
+  <ul class="item-list">
+    <li>
+      <a href="https://books.google.com/books/about/%E6%8E%A8%E5%8A%A8%E7%BB%BF%E8%89%B2%E5%8F%91%E5%B1%95_%E4%B8%AD%E5%9B%BD%E7%8E%AF%E5%A2%83%E5%AE%8F%E8%A7%82%E7%BB%8F.html?id=v5b-EAAAQBAJ">推动绿色发展：中国环境宏观经济学</a>
+      <p class="item-note">简介：围绕中国绿色转型与宏观政策协同，系统讨论环境约束下的增长机制与政策框架。</p>
+    </li>
+    <li>
+      <a href="https://wenddymacro.github.io/theeffectbook/">The Effect Book</a>
+      <p class="item-note">简介：聚焦因果效应识别与实证策略，面向政策评估与应用研究提供方法与案例。</p>
+    </li>
+  </ul>
+
+  <h3>译著</h3>
+  <ul class="item-list">
+    <li>
+      <a href="https://books.google.com/books/about/%E9%87%8F%E5%8C%96%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%8F%8AJulia%E5%BA%94.html?id=CbQD0QEACAAJ">量化宏观经济学导论及Julia应用</a>
+      <p class="item-note">简介：介绍量化宏观经济学核心思想，并结合Julia展示模型求解与模拟的实践路径。</p>
+    </li>
+    <li>
+      <a href="https://wenzhe-huang.github.io/python-causality-handbook-zh/intro.html#">Python因果推断手册（中文版）</a>
+      <p class="item-note">简介：从实证流程出发讲解Python中的因果推断工具，覆盖DID等常见识别方法。</p>
+    </li>
+  </ul>
+</section>
+
+<section class="card" data-lang="en">
+  <h2>Book</h2>
+  <h3>Monographs</h3>
+  <ul class="item-list">
+    <li>
+      <a href="https://books.google.com/books/about/%E6%8E%A8%E5%8A%A8%E7%BB%BF%E8%89%B2%E5%8F%91%E5%B1%95_%E4%B8%AD%E5%9B%BD%E7%8E%AF%E5%A2%83%E5%AE%8F%E8%A7%82%E7%BB%8F.html?id=v5b-EAAAQBAJ">Promoting Green Development: China's Environmental Macroeconomics</a>
+      <p class="item-note">Summary: This book discusses China's green transition and macro policy coordination under environmental constraints.</p>
+    </li>
+    <li>
+      <a href="https://wenddymacro.github.io/theeffectbook/">The Effect Book</a>
+      <p class="item-note">Summary: A practical reference on causal effect identification and empirical strategies for policy evaluation.</p>
+    </li>
+  </ul>
+
+  <h3>Translations</h3>
+  <ul class="item-list">
+    <li>
+      <a href="https://books.google.com/books/about/%E9%87%8F%E5%8C%96%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%AF%BC%E8%AE%BA%E5%8F%8AJulia%E5%BA%94.html?id=CbQD0QEACAAJ">Introduction to Quantitative Macroeconomics and Julia Applications</a>
+      <p class="item-note">Summary: Introduces core quantitative macroeconomics methods with practical Julia-based modeling workflows.</p>
+    </li>
+    <li>
+      <a href="https://wenzhe-huang.github.io/python-causality-handbook-zh/intro.html#">Python Causality Handbook (Chinese Translation)</a>
+      <p class="item-note">Summary: A hands-on guide to causal inference in Python, covering common designs including DID.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="card" data-lang="zh">
   <h2>链接与联系</h2>
   <ul>
     <li><a href="https://github.com/wenddymacro">GitHub</a></li>
@@ -262,6 +316,11 @@ body {
 
 h1, h2 {
   margin-top: 0;
+}
+
+h3 {
+  margin: 14px 0 6px;
+  color: #111827;
 }
 
 .item-list {
