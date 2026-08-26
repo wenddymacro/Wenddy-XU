@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Co.Metrics 能力地图 | Wenli Xu</title>
+<meta name="description" content="Co.Metrics —— 面向经济学实证研究的 AI 助手平台,62 个方法论技能与 33 项内置能力的完整地图。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root {
+  --ground: #FAFBFA;
+  --surface: #FFFFFF;
+  --surface-sunk: #F2F5F3;
+  --text: #16201E;
+  --text-soft: #46554F;
+  --muted: #6B7C76;
+  --border: #DFE5E2;
+  --tool: #16605A;
+  --tool-wash: #E6F0EE;
+  --skill: #9A5518;
+  --skill-wash: #F6EDE4;
+  --shadow: 0 1px 2px rgba(22, 32, 30, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0E1513;
+    --surface: #151E1B;
+    --surface-sunk: #111A17;
+    --text: #E9EEEB;
+    --text-soft: #B4C1BC;
+    --muted: #8A9994;
+    --border: #253230;
+    --tool: #5FBDB0;
+    --tool-wash: #142A28;
+    --skill: #D8944F;
+    --skill-wash: #2A2018;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0E1513;
+  --surface: #151E1B;
+  --surface-sunk: #111A17;
+  --text: #E9EEEB;
+  --text-soft: #B4C1BC;
+  --muted: #8A9994;
+  --border: #253230;
+  --tool: #5FBDB0;
+  --tool-wash: #142A28;
+  --skill: #D8944F;
+  --skill-wash: #2A2018;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--tool); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--tool);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 28px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ---- back nav ---- */
+.backlink {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+}
+.backlink:hover { color: var(--tool); }
+
+/* ---- masthead ---- */
+.masthead { display: flex; flex-direction: column; gap: 18px; }
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(34px, 5vw, 50px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+.lede { margin: 0; max-width: 62ch; font-size: 17px; color: var(--text-soft); }
+.lede-en {
+  margin: 0;
+  max-width: 68ch;
+  font-size: 14.5px;
+  color: var(--muted);
+  font-style: italic;
+}
+.tally { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.tally-card {
+  flex: 1 1 260px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--edge);
+  border-radius: 3px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: var(--shadow);
+}
+.tally-card.is-tool { --edge: var(--tool); }
+.tally-card.is-skill { --edge: var(--skill); }
+.tally-n {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--edge);
+}
+.tally-label { font-weight: 600; font-size: 15px; }
+.tally-note { font-size: 14px; color: var(--muted); line-height: 1.45; }
+
+/* ---- sections ---- */
+section { display: flex; flex-direction: column; gap: 24px; }
+.sec-head { display: flex; flex-direction: column; gap: 7px; }
+.sec-title {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 27px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+}
+.sec-title .dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+  transform: translateY(-2px);
+}
+.sec-note { margin: 0; max-width: 68ch; color: var(--text-soft); font-size: 15.5px; }
+.is-tools { --accent: var(--tool); --wash: var(--tool-wash); }
+.is-skills { --accent: var(--skill); --wash: var(--skill-wash); }
+
+.groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 16px; }
+
+.group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px 17px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  box-shadow: var(--shadow);
+}
+.group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--border);
+}
+.group-name { font-weight: 600; font-size: 15.5px; letter-spacing: -.005em; }
+.group-n {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  background: var(--wash);
+  border-radius: 2px;
+  padding: 2px 6px;
+  flex: none;
+}
+ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+/* li stays in normal flow on purpose: sibling names on one line must sit
+   inline with their separator, which a column flex container would break
+   onto separate rows. */
+li { line-height: 1.45; }
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  word-break: break-word;
+}
+.desc { display: block; font-size: 13.5px; color: var(--text-soft); line-height: 1.45; margin-top: 1px; }
+
+/* ---- distinction callout ---- */
+.callout {
+  background: var(--surface-sunk);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.callout h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.callout h3 .chip {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+.chip.tool { color: var(--tool); background: var(--tool-wash); }
+.chip.skill { color: var(--skill); background: var(--skill-wash); }
+.callout p { margin: 0; font-size: 14.5px; color: var(--text-soft); }
+
+/* ---- feature strip ---- */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 15px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: var(--shadow);
+}
+.feature-name { font-weight: 600; font-size: 15px; }
+.feature p { margin: 0; font-size: 13.5px; color: var(--text-soft); line-height: 1.5; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  font-size: 13.5px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <a class="backlink" href="../">← 返回主页 Wenli Xu</a>
+
+  <header class="masthead">
+    <div class="eyebrow">AI 计量研究平台 · 能力总览</div>
+    <h1>Co.Metrics 能力地图</h1>
+    <p class="lede">Co.Metrics 是一个面向经济学实证研究的 AI 助手平台——在同一个工作区里读数据、查文献、跑代码、按方法论走完一项研究。下面是它目前具备的全部能力。</p>
+    <p class="lede-en">Co.Metrics is an AI research assistant for applied economics: data, literature, computation, and methodology workflows in one workspace. This page maps its current capabilities.</p>
+    <div class="tally">
+      <div class="tally-card is-tool">
+        <div class="tally-n">33</div>
+        <div class="tally-label">内置能力 Tools</div>
+        <div class="tally-note">对话里随时可用,不需要额外设置</div>
+      </div>
+      <div class="tally-card is-skill">
+        <div class="tally-n">62</div>
+        <div class="tally-label">方法论技能 Skills</div>
+        <div class="tally-note">按需激活,把某个方法族的完整判断流程带进当前对话</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="callout">
+    <div>
+      <h3><span class="chip tool">能力</span> 做什么</h3>
+      <p>读文件、查数据、跑代码、检索文献——每次调用都是一次真实执行,有确定的输入与返回,不是模型凭印象作答。</p>
+    </div>
+    <div>
+      <h3><span class="chip skill">技能</span> 怎么做</h3>
+      <p>把一个方法族的完整判断流程写成文档:先做哪些诊断、什么条件下换估计量、哪些坑必须避开。技能改变的是<strong>做法</strong>,不是能力边界。</p>
+    </div>
+  </div>
+
+  <section class="is-tools">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>内置能力 · 33 项</h2>
+      <p class="sec-note">按用途分组。数据与文献两条线最厚,因为实证研究的时间大多花在这两件事上。</p>
+    </div>
+    <div class="groups">
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">数据发现与查询</span><span class="group-n">12</span></div>
+        <ul>
+          <li><code>search_data_sources</code><span class="desc">按主题找可用数据源</span></li>
+          <li><code>search_data</code> · <code>semantic_search_data</code><span class="desc">关键词 / 语义两路检索本地数据目录</span></li>
+          <li><code>describe_variables</code><span class="desc">变量的类型、缺失、分布画像</span></li>
+          <li><code>recommend_data</code><span class="desc">按研究问题推荐已登记的数据集与变量</span></li>
+          <li><code>explore_data</code> · <code>preview_data</code> · <code>query_data</code><span class="desc">探查、抽样预览、结构化查询</span></li>
+          <li><code>snapshot</code> · <code>catalog_digest</code><span class="desc">数据目录的快照与摘要</span></li>
+          <li><code>search</code> · <code>inspect</code><span class="desc">通用检索与对象细查</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">项目文件</span><span class="group-n">7</span></div>
+        <ul>
+          <li><code>list_project_files</code> · <code>search_project</code><span class="desc">列目录、全文搜项目</span></li>
+          <li><code>read_project_file</code> · <code>read_sections</code><span class="desc">整篇读 / 按段落读</span></li>
+          <li><code>apply_project_file_change</code><span class="desc">写入改动</span></li>
+          <li><code>undo_project_file_change</code><span class="desc">撤销上一次写入</span></li>
+          <li><code>replace_range</code><span class="desc">按范围精确替换</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">文献检索</span><span class="group-n">4</span></div>
+        <ul>
+          <li><code>search_ncpssd</code><span class="desc">国家哲学社会科学文献中心直连,结果自带分级:中文顶刊命中排在最前</span></li>
+          <li><code>search_scholarly</code><span class="desc">OpenAlex / Crossref / Semantic Scholar,支持按 ISSN 与 DOI 前缀定向顶刊</span></li>
+          <li><code>search_literature</code><span class="desc">学术网页检索</span></li>
+          <li><code>browse_recent_econ</code><span class="desc">NEP 工作论文与 Vox 专栏的最近窗口</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">技能调度</span><span class="group-n">6</span></div>
+        <ul>
+          <li><code>list_agent_skills</code><span class="desc">列出当前可用的技能</span></li>
+          <li><code>activate_agent_skill</code><span class="desc">激活技能,把它的流程带进当前对话</span></li>
+          <li><code>read_agent_skill_file</code><span class="desc">读技能自带的参考文档</span></li>
+          <li><code>run_agent_skill_script</code><span class="desc">运行技能附带的脚本</span></li>
+          <li><code>run_skill_analysis</code><span class="desc">按技能流程执行一次分析</span></li>
+          <li><code>request_skill_install</code><span class="desc">请求安装缺失的技能</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">代码执行</span><span class="group-n">2</span></div>
+        <ul>
+          <li><code>execute_sandbox</code><span class="desc">在隔离沙箱里跑代码,支持 Python / Octave / Julia</span></li>
+          <li><code>run_sandbox_shell</code><span class="desc">同一沙箱内的受限命令行</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">公共统计数据</span><span class="group-n">2</span></div>
+        <ul>
+          <li><code>search_world_bank_indicators</code><span class="desc">世界银行指标检索</span></li>
+          <li><code>query_world_bank_data</code><span class="desc">按国家 / 年份取世行数据</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="is-skills">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>方法论技能 · 62 个</h2>
+      <p class="sec-note">大部分是<strong>方法族(workflows)</strong>——一个族覆盖该方法的路由、诊断阶梯与常见误用;少数是<strong>实践指南(practitioner)</strong>,按某本权威教材的流程走完整个研究。</p>
+    </div>
+    <div class="groups">
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">因果识别</span><span class="group-n">15</span></div>
+        <ul>
+          <li><code>did_workflows</code> · <code>did_practitioner</code><span class="desc">交错处理、事件研究;实践指南按 Baker–Callaway–Cunningham–Goodman-Bacon–Sant'Anna 九步走</span></li>
+          <li><code>rd_workflows</code> · <code>rdd_practitioner</code><span class="desc">断点回归;实践指南按 Cattaneo–Idrobo–Titiunik 两卷四阶段八动作</span></li>
+          <li><code>iv_workflows</code><span class="desc">2SLS / LATE、弱工具变量诊断</span></li>
+          <li><code>synthetic_control_workflows</code><span class="desc">广义合成控制与矩阵补全</span></li>
+          <li><code>shift_share_workflows</code><span class="desc">移份额设计的推断与设定检验</span></li>
+          <li><code>hte_workflows</code> · <code>uplift_workflows</code><span class="desc">异质处理效应:因果森林 / BART;提升建模与 Qini</span></li>
+          <li><code>tmle_workflows</code> · <code>dtr_workflows</code><span class="desc">靶向学习;动态处理规则的 Q-learning</span></li>
+          <li><code>interference_workflows</code><span class="desc">SUTVA 失效下的溢出与干扰</span></li>
+          <li><code>bunching_workflows</code><span class="desc">扭结点与断点处的聚束估计</span></li>
+          <li><code>causal_discovery_workflows</code> · <code>sem_workflows</code><span class="desc">结构学习与因果图;结构方程与潜变量</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">深度学习解模型</span><span class="group-n">11</span></div>
+        <ul>
+          <li><code>dl_method_selection</code><span class="desc">先决定用 DEQN、PINN 还是别的</span></li>
+          <li><code>deqn_solve</code> · <code>deqn_training_diagnostics</code><span class="desc">深度均衡网求解;训完了但解可疑时的诊断</span></li>
+          <li><code>heterogeneous_agents_deep</code><span class="desc">分布本身是状态变量的异质主体模型</span></li>
+          <li><code>pinns_for_economic_pdes</code><span class="desc">HJB 等经济学微分方程</span></li>
+          <li><code>autodiff_for_equilibrium</code><span class="desc">自动微分推导欧拉方程残差</span></li>
+          <li><code>all_at_once_model_solving</code><span class="desc">一次解出全参数空间</span></li>
+          <li><code>surrogates_and_gp</code> · <code>moment_network_surrogate</code><span class="desc">深度代理与高斯过程;矩网络</span></li>
+          <li><code>gradient_based_smm</code><span class="desc">可微矩曲面上的 LM 估计</span></li>
+          <li><code>dl_device_and_scale</code><span class="desc">CUDA / Apple 芯片适配</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">Dynare / DSGE</span><span class="group-n">8</span></div>
+        <ul>
+          <li><code>dynare_setup</code><span class="desc">MATLAB 或 Octave 后端的安装与验证</span></li>
+          <li><code>dynare_modeling</code><span class="desc">建模总纲,含 Dynare 手册 7.1 语料</span></li>
+          <li><code>dynare_write_mod</code><span class="desc">写 .mod:变量声明、非线性一阶条件</span></li>
+          <li><code>dynare_steady_state</code><span class="desc">稳态求解,含递归收缩级联解法</span></li>
+          <li><code>dynare_solve_simulate</code><span class="desc">跑起来,并判断是不是真跑通了</span></li>
+          <li><code>dynare_irf</code> · <code>dynare_postprocess</code><span class="desc">脉冲响应;输出结构解析</span></li>
+          <li><code>dynare_debug</code><span class="desc">Blanchard-Kahn 失败、雅可比共线、稳态 NaN</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">复现与审查</span><span class="group-n">8</span></div>
+        <ul>
+          <li><code>audit_reproducibility</code><span class="desc">稿件里每个数字反查回脚本输出,按精度做舍入感知匹配</span></li>
+          <li><code>verify_claims</code><span class="desc">核查草稿里的事实性断言</span></li>
+          <li><code>code_review</code> · <code>package_review</code><span class="desc">只读审查 R / Python 脚本;审查 R 包与 Python 包源码</span></li>
+          <li><code>capture_environment</code><span class="desc">整理复现包的计算环境与锁文件</span></li>
+          <li><code>diagnose</code><span class="desc">复现 → 最小化 → 假设 → 验证的根因定位</span></li>
+          <li><code>disclosure_check</code><span class="desc">受限数据产物的统计披露风险预筛</span></li>
+          <li><code>validate_bib</code><span class="desc">.bib 与稿件引用的自洽性</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">写作与投稿</span><span class="group-n">5</span></div>
+        <ul>
+          <li><code>ss_ideation</code><span class="desc">社科选题:给粗题或领域,产出 3–5 个可做的题</span></li>
+          <li><code>lit_review</code><span class="desc">按主题聚类的结构化综述,写清「已知什么 / 在争什么」;含分级文献源阶梯</span></li>
+          <li><code>respond_to_referees</code><span class="desc">审稿意见变成逐条对应的回复文档</span></li>
+          <li><code>submission_disclosures</code><span class="desc">AI 使用声明、CRediT 作者贡献等四份声明</span></li>
+          <li><code>preregister</code><span class="desc">OSF / AsPredicted / AEA RCT Registry 风格的预注册</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">推断与研究设计</span><span class="group-n">4</span></div>
+        <ul>
+          <li><code>inference_workflows</code><span class="desc">异方差 / 聚类 / HAC 稳健方差</span></li>
+          <li><code>missing_data_workflows</code><span class="desc">缺失机制诊断与多重插补</span></li>
+          <li><code>power_analysis_workflows</code><span class="desc">功效、最小可检测效应与样本量规划</span></li>
+          <li><code>monte_carlo_simulation</code><span class="desc">可复现的蒙特卡洛设计</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">结构估计</span><span class="group-n">3</span></div>
+        <ul>
+          <li><code>estimation_objective</code><span class="desc">数值稳定的似然 / GMM 目标函数与参数变换</span></li>
+          <li><code>optimizer_selection</code><span class="desc">选配 scipy.optimize 的方法</span></li>
+          <li><code>identification_minimum_loss</code><span class="desc">最小损失函数诊断全局识别</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">时序与宏观计量</span><span class="group-n">3</span></div>
+        <ul>
+          <li><code>var_workflows</code><span class="desc">VAR / SVAR / VECM,含 Cholesky、长期、符号与叙事识别</span></li>
+          <li><code>local_projection_workflows</code><span class="desc">Jordà 局部投影</span></li>
+          <li><code>dsgevar_workflows</code><span class="desc">把结构 DSGE 接到 VAR / 局部投影的经验证据上</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">Octave 环境</span><span class="group-n">3</span></div>
+        <ul>
+          <li><code>octave_setup</code><span class="desc">检测与区分发行版</span></li>
+          <li><code>octave_packages</code><span class="desc">Octave Forge 的包安装与排障</span></li>
+          <li><code>octave_numerical_debug</code><span class="desc">NaN/Inf、迭代不收敛、矩阵病态</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="group-name">产出与演示</span><span class="group-n">2</span></div>
+        <ul>
+          <li><code>economics_canvas</code><span class="desc">把做完的计量分析变成只读的 Economics Canvas</span></li>
+          <li><code>hello_echo</code><span class="desc">演示技能,用来验证激活与脚本链路</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2 class="sec-title" style="--accent: var(--muted)"><span class="dot"></span>清单之外</h2>
+      <p class="sec-note">这些是平台自身的功能,不以技能或能力条目的形式出现。</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-name">三角色审稿</div>
+        <p>主编定调派活,方法审稿人按论文类型(简约式 / 结构式 / 理论+实证等)各带一套维度权重,领域审稿人管选题贡献与文献定位。可按目标期刊校准严苛程度。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">对话面与代码面</div>
+        <p>对话面做研究推进,代码面是完整的 JupyterLab —— notebook 可直接编辑运行,Stata 内核也在。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">数据源连接</div>
+        <p>世界银行、OECD、国家哲学社会科学文献中心、OpenAlex / Crossref / Semantic Scholar,以及本地数据目录的扫描、画像与语义索引。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-name">DSGE 建模流水线</div>
+        <p>从模型文档到求解模拟的完整链路,由专门的 DSGE 专家角色接手,而不是通用助手。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Co.Metrics 由<a href="../">许文立</a>开发,面向经济学实证研究。</div>
+    <div>能力清单随版本更新;本页内容对应 2026 年 8 月的版本。</div>
+  </footer>
+
+</div>
+</body>
+</html>

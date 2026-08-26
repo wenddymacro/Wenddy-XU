@@ -120,6 +120,26 @@
 </section>
 
 <section class="card" data-lang="zh">
+  <h2>研究平台</h2>
+  <ul class="item-list">
+    <li>
+      <a href="./cometrics/">Co.Metrics 能力地图</a>
+      <p class="item-note">简介：面向经济学实证研究的AI助手平台，在同一工作区里完成数据探查、文献检索、代码运行与方法论流程。点击查看62个方法论技能与33项内置能力的完整地图。</p>
+    </li>
+  </ul>
+</section>
+
+<section class="card" data-lang="en">
+  <h2>Research Platform</h2>
+  <ul class="item-list">
+    <li>
+      <a href="./cometrics/">Co.Metrics Capability Map</a>
+      <p class="item-note">Summary: An AI research assistant for applied economics — data exploration, literature search, computation, and methodology workflows in one workspace. See the full map of 62 methodology skills and 33 built-in capabilities.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="card" data-lang="zh">
   <h2>Packages</h2>
   <p>这些工具包面向政策评估与因果推断实证工作，覆盖Python与Stata环境。</p>
   <ul class="item-list">
