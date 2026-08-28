@@ -126,6 +126,10 @@
       <a href="./cometrics/">Co.Metrics 能力地图</a>
       <p class="item-note">简介：面向经济学实证研究的AI助手平台，在同一工作区里完成数据探查、文献检索、代码运行与方法论流程。点击查看62个方法论技能与33项内置能力的完整地图。</p>
     </li>
+    <li>
+      <a href="./cometrics/guide/">Co.Metrics 使用手册</a>
+      <p class="item-note">简介：写给使用者的上手指南——拿账号、建项目、Work 与 Code 两个工作面、自己安装 R 与 Octave、文件搬进搬出。不需要懂服务器，一个浏览器就够。</p>
+    </li>
   </ul>
 </section>
 
@@ -135,6 +139,10 @@
     <li>
       <a href="./cometrics/">Co.Metrics Capability Map</a>
       <p class="item-note">Summary: An AI research assistant for applied economics — data exploration, literature search, computation, and methodology workflows in one workspace. See the full map of 62 methodology skills and 33 built-in capabilities.</p>
+    </li>
+    <li>
+      <a href="./cometrics/guide/">Co.Metrics User Manual</a>
+      <p class="item-note">Summary: A getting-started guide for users — accounts, projects, the Work and Code panels, installing R and Octave yourself, and moving files in and out. No server knowledge needed; a browser is enough.</p>
     </li>
   </ul>
 </section>

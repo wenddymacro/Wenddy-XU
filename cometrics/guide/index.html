@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Co.Metrics 使用手册 | Wenli Xu</title>
+<meta name="description" content="Co.Metrics 使用手册——写给研究者、学生、课题组成员：拿账号、建项目、两个工作面、装 R 和 Octave、搬运文件。一个浏览器就够。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+
+:root {
+  --ground: #FAFBFA;
+  --surface: #FFFFFF;
+  --surface-sunk: #F2F5F3;
+  --text: #16201E;
+  --text-soft: #46554F;
+  --muted: #6B7C76;
+  --border: #DFE5E2;
+  --tool: #16605A;
+  --tool-wash: #E6F0EE;
+  --skill: #9A5518;
+  --skill-wash: #F6EDE4;
+  --shadow: 0 1px 2px rgba(22, 32, 30, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0E1513;
+    --surface: #151E1B;
+    --surface-sunk: #111A17;
+    --text: #E9EEEB;
+    --text-soft: #B4C1BC;
+    --muted: #8A9994;
+    --border: #253230;
+    --tool: #5FBDB0;
+    --tool-wash: #142A28;
+    --skill: #D8944F;
+    --skill-wash: #2A2018;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0E1513;
+  --surface: #151E1B;
+  --surface-sunk: #111A17;
+  --text: #E9EEEB;
+  --text-soft: #B4C1BC;
+  --muted: #8A9994;
+  --border: #253230;
+  --tool: #5FBDB0;
+  --tool-wash: #142A28;
+  --skill: #D8944F;
+  --skill-wash: #2A2018;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--tool); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--tool);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 28px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ---- back nav ---- */
+.backlink {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+}
+.backlink:hover { color: var(--tool); }
+
+/* ---- masthead ---- */
+.masthead { display: flex; flex-direction: column; gap: 18px; }
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(34px, 5vw, 50px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+.lede { margin: 0; max-width: 62ch; font-size: 17px; color: var(--text-soft); }
+.lede-en {
+  margin: 0;
+  max-width: 68ch;
+  font-size: 14.5px;
+  color: var(--muted);
+  font-style: italic;
+}
+.tally { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.tally-card {
+  flex: 1 1 260px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--edge);
+  border-radius: 3px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: var(--shadow);
+}
+.tally-card.is-tool { --edge: var(--tool); }
+.tally-card.is-skill { --edge: var(--skill); }
+.tally-n {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--edge);
+}
+.tally-label { font-weight: 600; font-size: 15px; }
+.tally-note { font-size: 14px; color: var(--muted); line-height: 1.45; }
+
+/* ---- sections ---- */
+section { display: flex; flex-direction: column; gap: 24px; }
+.sec-head { display: flex; flex-direction: column; gap: 7px; }
+.sec-title {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 27px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+}
+.sec-title .dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+  transform: translateY(-2px);
+}
+.sec-note { margin: 0; max-width: 68ch; color: var(--text-soft); font-size: 15.5px; }
+.is-tools { --accent: var(--tool); --wash: var(--tool-wash); }
+.is-skills { --accent: var(--skill); --wash: var(--skill-wash); }
+
+.groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 16px; }
+
+.group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px 17px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  box-shadow: var(--shadow);
+}
+.group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--border);
+}
+.group-name { font-weight: 600; font-size: 15.5px; letter-spacing: -.005em; }
+.group-n {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  background: var(--wash);
+  border-radius: 2px;
+  padding: 2px 6px;
+  flex: none;
+}
+ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+/* li stays in normal flow on purpose: sibling names on one line must sit
+   inline with their separator, which a column flex container would break
+   onto separate rows. */
+li { line-height: 1.45; }
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  word-break: break-word;
+}
+.desc { display: block; font-size: 13.5px; color: var(--text-soft); line-height: 1.45; margin-top: 1px; }
+
+/* ---- distinction callout ---- */
+.callout {
+  background: var(--surface-sunk);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.callout h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.callout h3 .chip {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+.chip.tool { color: var(--tool); background: var(--tool-wash); }
+.chip.skill { color: var(--skill); background: var(--skill-wash); }
+.callout p { margin: 0; font-size: 14.5px; color: var(--text-soft); }
+
+/* ---- feature strip ---- */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 15px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: var(--shadow);
+}
+.feature-name { font-weight: 600; font-size: 15px; }
+.feature p { margin: 0; font-size: 13.5px; color: var(--text-soft); line-height: 1.5; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  font-size: 13.5px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+footer a { color: var(--muted); }
+
+/* ======== 使用手册专用 ======== */
+.is-guide { --accent: var(--tool); --wash: var(--tool-wash); }
+
+/* 目录 */
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+.toc h2 {
+  margin: 0 0 12px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.toc ol {
+  margin: 0; padding: 0; list-style: none;
+  columns: 2; column-gap: 28px;
+  font-variant-numeric: tabular-nums;
+}
+.toc li { margin-bottom: 7px; break-inside: avoid; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.toc .num {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-right: 7px;
+}
+@media (max-width: 640px) { .toc ol { columns: 1; } }
+
+/* 正文 */
+.prose { display: flex; flex-direction: column; gap: 15px; }
+.prose p { margin: 0; max-width: 70ch; color: var(--text-soft); }
+.prose strong { color: var(--text); font-weight: 600; }
+.prose ul, .prose ol {
+  margin: 0; padding-left: 22px; list-style: revert;
+  display: flex; flex-direction: column; gap: 7px;
+  max-width: 70ch; color: var(--text-soft);
+}
+.prose h3 {
+  margin: 10px 0 0;
+  font-family: Newsreader, Georgia, serif;
+  font-size: 19px; font-weight: 600; letter-spacing: -.005em;
+  color: var(--text);
+}
+
+/* 提示框 */
+.note {
+  border-left: 3px solid var(--accent);
+  background: var(--surface-sunk);
+  border-radius: 0 4px 4px 0;
+  padding: 13px 16px;
+  font-size: 14.5px;
+  color: var(--text-soft);
+  max-width: 70ch;
+}
+.note p { margin: 0; font-size: 14.5px; }
+.note p + p { margin-top: 7px; }
+.note.warn { --accent: var(--skill); }
+
+/* 命令块 */
+pre {
+  margin: 0;
+  background: var(--surface-sunk);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text);
+}
+pre code { color: inherit; font-size: inherit; font-weight: 400; }
+
+/* 截图 */
+figure {
+  margin: 4px 0 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  max-width: 780px;
+}
+figure img { display: block; width: 100%; height: auto; }
+figcaption {
+  padding: 8px 13px;
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: var(--surface-sunk);
+}
+
+/* 表格 */
+.tbl { overflow-x: auto; max-width: 780px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+th, td {
+  text-align: left;
+  padding: 9px 13px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 13px; color: var(--muted); background: var(--surface-sunk); }
+td { color: var(--text-soft); }
+
+/* FAQ */
+.faq { display: flex; flex-direction: column; gap: 11px; }
+details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 13px 16px;
+  box-shadow: var(--shadow);
+}
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  list-style: none;
+  display: flex; align-items: center; gap: 9px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: "+";
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--tool);
+  font-size: 15px;
+  flex: none;
+}
+details[open] summary::before { content: "\2212"; }
+details p { margin: 9px 0 0 24px; font-size: 14.5px; color: var(--text-soft); max-width: 66ch; }
+details p + p { margin-top: 7px; }
+
+/* 章节锚点便于目录跳转时不被遮挡 */
+section[id] { scroll-margin-top: 20px; }
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <a class="backlink" href="../">← 返回 Co.Metrics 能力地图</a>
+
+  <header class="masthead">
+    <div class="eyebrow">AI 计量研究平台 · 使用手册</div>
+    <h1>Co.Metrics 使用手册</h1>
+    <p class="lede">写给<strong>使用者</strong>：研究者、学生、课题组成员。你不需要懂服务器，也不需要装任何软件——一个浏览器就够。</p>
+    <p class="lede-en">A user manual for researchers and students: no server knowledge, no local installation — a browser is enough.</p>
+  </header>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><span class="num">01</span><a href="#files">你的文件在哪</a></li>
+      <li><span class="num">02</span><a href="#account">拿到账号</a></li>
+      <li><span class="num">03</span><a href="#login">第一次登录</a></li>
+      <li><span class="num">04</span><a href="#project">建立第一个研究项目</a></li>
+      <li><span class="num">05</span><a href="#panels">两个工作面：Work 和 Code</a></li>
+      <li><span class="num">06</span><a href="#languages">用 R 和 Octave</a></li>
+      <li><span class="num">07</span><a href="#apikey">配置模型 API Key</a></li>
+      <li><span class="num">08</span><a href="#upload">把文件搬进来</a></li>
+      <li><span class="num">09</span><a href="#download">把结果取回本机</a></li>
+      <li><span class="num">10</span><a href="#password">修改密码</a></li>
+      <li><span class="num">11</span><a href="#faq">常见问题</a></li>
+    </ol>
+  </nav>
+
+  <section id="files" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>1. 你的文件在哪</h2>
+      <p class="sec-note">先说清楚这一件事，能省掉后面一半的困惑。</p>
+    </div>
+    <div class="prose">
+      <p><strong>Co.Metrics 跑在一台服务器上，不在你的电脑里。</strong>你登录后拿到的是<strong>你专属的一间工作间</strong>——别人看不到你的文件，你也看不到别人的。</p>
+      <ul>
+        <li>界面里的文件树，是<strong>服务器上</strong>的目录，不是你电脑上的</li>
+        <li>你电脑上的数据要先<strong>上传</strong>才能用（见第 8 节）</li>
+        <li>跑出来的结果要<strong>下载</strong>才能拿回本机（见第 9 节）</li>
+      </ul>
+      <div class="note">
+        <p><strong>你的文件不会丢。</strong>工作间闲置一小时后会被自动回收以释放服务器资源，但你的项目、数据、Notebook 和结果全部保留，下次登录会原样回来（要多等 10–60 秒重新启动）。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="account" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>2. 拿到账号</h2>
+      <p class="sec-note">两种来源，问一下你的管理员是哪种。</p>
+    </div>
+    <div class="prose">
+      <p><strong>A. 管理员直接给你</strong> —— 他会告诉你用户名和初始密码，跳到第 3 节。</p>
+      <p><strong>B. 你自己申请</strong> —— 管理员给你一个<strong>邀请码</strong>，你自己填表申请，他审核通过后生效。</p>
+      <h3>自助申请的步骤</h3>
+      <p>打开网址，先到欢迎页，点「凭邀请码申请账号」：</p>
+      <figure>
+        <img src="images/01-login.png" alt="登录页" loading="lazy">
+        <figcaption>登录页</figcaption>
+      </figure>
+      <p>填写申请表：</p>
+      <figure>
+        <img src="images/03-register-filled.png" alt="申请表填写示例" loading="lazy">
+        <figcaption>申请表填写示例</figcaption>
+      </figure>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>字段</th><th>要求</th></tr></thead>
+          <tbody>
+            <tr><td>用户名</td><td><strong>小写字母、数字、连字符</strong>，2–31 个字符，不能以连字符开头。比如 <code>zhang-san</code></td></tr>
+            <tr><td>密码</td><td>至少 <strong>12 位</strong></td></tr>
+            <tr><td>邀请码</td><td>管理员给你的那串字符。<strong>一码一人，用过即失效</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <p><strong>用户名为什么这么严？</strong>它会直接变成服务器上你那间工作间的名字，所以只能用最保守的字符。</p>
+      </div>
+      <figure>
+        <img src="images/04-register-submitted.png" alt="提交后等待审核" loading="lazy">
+        <figcaption>提交后等待审核</figcaption>
+      </figure>
+      <div class="note warn">
+        <p><strong>这时还不能登录。</strong>要等管理员批准——催他一下。批准之后，用你刚才填的用户名和密码登录。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="login" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>3. 第一次登录</h2>
+      <p class="sec-note">用你的用户名和密码登录。</p>
+    </div>
+    <div class="prose">
+      <p>登录后进入工作台。第一次可能要等 10–60 秒——服务器在为你启动专属工作间。</p>
+      <figure>
+        <img src="images/05-after-login.png" alt="登录后的工作台" loading="lazy">
+        <figcaption>登录后的工作台</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="project" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>4. 建立第一个研究项目</h2>
+      <p class="sec-note">所有工作都在「项目」里进行，一个课题一个项目。</p>
+    </div>
+    <div class="prose">
+      <p>点项目选择器，新建一个项目：</p>
+      <figure>
+        <img src="images/07-project-picker.png" alt="项目选择器" loading="lazy">
+        <figcaption>项目选择器</figcaption>
+      </figure>
+      <p>建好之后，它就是你这个课题的根目录——数据、代码、结果都放在里面。</p>
+      <figure>
+        <img src="images/09-folder-created.png" alt="项目建立完成" loading="lazy">
+        <figcaption>项目建立完成</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="panels" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>5. 两个工作面：Work 和 Code</h2>
+      <p class="sec-note">同一批文件，两种用法。</p>
+    </div>
+    <div class="prose">
+      <h3>Work —— 和 AI 对话做研究</h3>
+      <p>用自然语言提研究问题，AI 会读数据、写代码、跑结果、给解释。</p>
+      <figure>
+        <img src="images/10-workbench.png" alt="Work 面" loading="lazy">
+        <figcaption>Work 面</figcaption>
+      </figure>
+      <h3>Code —— 直接写代码</h3>
+      <p>点「Code」切过去，这是一个完整的 JupyterLab：</p>
+      <figure>
+        <img src="images/11-code.png" alt="Code 面" loading="lazy">
+        <figcaption>Code 面</figcaption>
+      </figure>
+      <ul>
+        <li><strong>Notebook → Python 3 (Metrics AI)</strong> 新建一个 Notebook（要用 R 或 Octave 见第 6 节）</li>
+        <li>左侧「项目目录」是这个项目的文件树，支持搜索</li>
+        <li>上传按钮和右键菜单在这里（见第 8 节）</li>
+      </ul>
+      <div class="note">
+        <p>第一次进 Code 面，右下角可能弹出一个 JupyterLab 的新闻订阅提示（英文）。点 <strong>No</strong> 关掉即可，和 Co.Metrics 无关。</p>
+      </div>
+      <p>两个面<strong>共用同一批文件</strong>：Work 里 AI 写的 Notebook，在 Code 里能直接打开改；你在 Code 里存的数据，Work 里的 AI 也看得到。</p>
+    </div>
+  </section>
+
+  <section id="languages" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>6. 用 R 和 Octave</h2>
+      <p class="sec-note">默认只有 Python 内核。R 和 Octave 你自己装一次，装完就一直在。</p>
+    </div>
+    <div class="prose">
+      <div class="note">
+        <p><strong>为什么不预装好？</strong>预装意味着所有人被锁在同一个版本上，而那个版本往往不是最新的。自己装，你想用哪个版本就用哪个。</p>
+      </div>
+      <h3>装 R</h3>
+      <p>在 Code 面打开一个终端（左侧 Launcher 里的「Terminal」），粘贴这两条：</p>
+      <pre><code>micromamba create -y -p ~/.local/runtimes/r -c conda-forge r-base r-irkernel
+~/.local/runtimes/r/bin/Rscript -e 'IRkernel::installspec(user = TRUE, displayname = "R")'</code></pre>
+      <p>第一条装 R 本身（几分钟，取决于网速），第二条让它出现在 Launcher 上。<strong>刷新页面</strong>，新建 Notebook 时就多了一张 R 卡片。</p>
+      <p>想要特定版本，把第一条改成 <code>r-base=4.5</code> 这样即可。</p>
+      <h3>装 Octave</h3>
+      <pre><code>micromamba create -y -p ~/.local/runtimes/octave -c conda-forge octave octave_kernel
+~/.local/runtimes/octave/bin/python -m octave_kernel install --user</code></pre>
+      <p>同样刷新页面后生效。</p>
+      <h3>装 R 包：用 install.packages，不要用 micromamba</h3>
+      <pre><code>install.packages("fixest")</code></pre>
+      <p>在 R Notebook 里直接这么写就行。包会装进你自己的工作间，<strong>而且是 CRAN 上的最新版</strong>。</p>
+      <div class="note warn">
+        <p>用 <code>micromamba install r-fixest</code> 也能装上，但 conda 那边的 R 包更新往往滞后好几个月，计量方法包尤其明显——新方法出来了，conda 里还是旧的。所以<strong>运行时用 conda 装，包用 CRAN 装</strong>。</p>
+        <p>Octave 同理，用 <code>pkg install -forge 包名</code>。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="apikey" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>7. 配置模型 API Key</h2>
+      <p class="sec-note">AI 功能要先填自己的 API Key 才能用。左下角「设置」里填。</p>
+    </div>
+    <div class="prose">
+      <ul>
+        <li>key 存在<strong>你自己的工作间</strong>里，不与别人共享</li>
+        <li>用量算你自己的</li>
+        <li>管理员不会替你填</li>
+      </ul>
+      <p>具体填哪家、填什么，问你的管理员——不同课题组用的模型可能不一样。</p>
+    </div>
+  </section>
+
+  <section id="upload" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>8. 把文件搬进来</h2>
+      <p class="sec-note">少量文件和整个文件夹都能直接在界面里传。</p>
+    </div>
+    <div class="prose">
+      <p>在 Code 面左侧文件树上方点上传按钮，选文件即可。<strong>整个文件夹</strong>也支持——直接选文件夹上传。</p>
+      <div class="note">
+        <p>三条边界值得知道：文件落在<strong>项目根目录</strong>而不是你当前打开的目录；同名文件会变成「名字-2」<strong>而不是覆盖</strong>；上传的压缩包不会自动解压。</p>
+      </div>
+      <p>几个 GB、上万个文件这种规模，界面会比较吃力，找管理员要搬运脚本。</p>
+    </div>
+  </section>
+
+  <section id="download" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>9. 把结果取回本机</h2>
+      <p class="sec-note">在文件树里右键，选下载。</p>
+    </div>
+    <div class="prose">
+      <p>单个文件直接下载。<strong>整个文件夹</strong>会打包成 zip 下载。</p>
+      <div class="note">
+        <p>打包下载的 zip 里<strong>不含隐藏文件</strong>（以 <code>.</code> 开头的那些）。如果你的结果依赖某个隐藏配置文件，单独下载它。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="password" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>10. 修改密码</h2>
+      <p class="sec-note">左下角「设置」或管理后台页脚都有入口。</p>
+    </div>
+    <div class="prose">
+      <p>要先验证当前密码。改完之后，<strong>你在其它设备上的登录会立即失效</strong>，需要用新密码重新登录。</p>
+      <figure>
+        <img src="images/06-password.png" alt="修改密码" loading="lazy">
+        <figcaption>修改密码</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="faq" class="is-guide">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="dot"></span>11. 常见问题</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>登录后一直转圈？</summary>
+        <p>第一次登录或闲置回收后重新登录，需要 10–60 秒启动工作间。超过两分钟还不行，找管理员。</p>
+      </details>
+      <details>
+        <summary>提交申请后登不进去？</summary>
+        <p>申请需要管理员批准才生效。催他。</p>
+      </details>
+      <details>
+        <summary>我的文件会不会丢？</summary>
+        <p>不会。闲置一小时后工作间会被回收，但<strong>你项目里的一切都保留</strong>，下次登录原样回来。唯一的例外是写到项目目录之外的临时文件（比如代码里写死 <code>/tmp/xxx</code>）——用相对路径或存在项目里就不会有这个问题。</p>
+      </details>
+      <details>
+        <summary>能不能直接打开我电脑上的文件夹？</summary>
+        <p>不能。Co.Metrics 跑在服务器上，看不到你的硬盘。要先上传，见第 8 节。</p>
+      </details>
+      <details>
+        <summary>我装的包，别人能用吗？</summary>
+        <p>不能，每个人的工作间是隔离的——你装的 R、Octave 和它们的包只属于你，别人看不到，也不会被别人弄坏。反过来说，同组的人要用，各自装一次。</p>
+      </details>
+      <details>
+        <summary>R 和 Octave 怎么装？</summary>
+        <p>见第 6 节，自己在终端里跑两条命令，装完一直在。</p>
+      </details>
+      <details>
+        <summary>能装 Stata 或 MATLAB 吗？</summary>
+        <p>不能，那两个要商业授权，不是装不装得上的问题。Octave 能跑绝大多数 MATLAB 语法的代码，DSGE 那条线（Dynare）就是走 Octave 的。</p>
+      </details>
+      <details>
+        <summary>Python 装包提示权限不足？</summary>
+        <p>用 <code>pip install --user 包名</code>。装到你自己的工作间里，会一直留着。</p>
+      </details>
+      <details>
+        <summary>页面显示不对／样式乱掉？</summary>
+        <p>先硬刷新一次（Mac 上 <code>Cmd+Shift+R</code>）。还不行就找管理员。</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div>管理员（发账号、审核申请、维护服务器）请另看管理员手册。</div>
+    <div><a href="../">Co.Metrics 能力地图</a> · <a href="../../">Wenli Xu 主页</a></div>
+  </footer>
+
+</div>
+
+</body>
+</html>
