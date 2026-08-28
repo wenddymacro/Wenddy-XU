@@ -123,6 +123,10 @@
   <h2>研究平台</h2>
   <ul class="item-list">
     <li>
+      <a href="https://comet.infsum.com">Co.Metrics 研究平台</a>
+      <p class="item-note">面向经济学实证研究的AI助手平台，浏览器打开即可使用：<a href="https://comet.infsum.com">https://comet.infsum.com</a>。需要账号，向管理员索取邀请码。</p>
+    </li>
+    <li>
       <a href="./cometrics/">Co.Metrics 能力地图</a>
       <p class="item-note">简介：面向经济学实证研究的AI助手平台，在同一工作区里完成数据探查、文献检索、代码运行与方法论流程。点击查看62个方法论技能与33项内置能力的完整地图。</p>
     </li>
@@ -136,6 +140,10 @@
 <section class="card" data-lang="en">
   <h2>Research Platform</h2>
   <ul class="item-list">
+    <li>
+      <a href="https://comet.infsum.com">Co.Metrics Platform</a>
+      <p class="item-note">An AI research assistant for applied economics, available in the browser at <a href="https://comet.infsum.com">https://comet.infsum.com</a>. An account is required — ask the administrator for an invitation code.</p>
+    </li>
     <li>
       <a href="./cometrics/">Co.Metrics Capability Map</a>
       <p class="item-note">Summary: An AI research assistant for applied economics — data exploration, literature search, computation, and methodology workflows in one workspace. See the full map of 62 methodology skills and 33 built-in capabilities.</p>
