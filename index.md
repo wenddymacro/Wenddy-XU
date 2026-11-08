@@ -134,6 +134,10 @@
       <a href="./cometrics/guide/">Co.Metrics 使用手册</a>
       <p class="item-note">简介：写给使用者的上手指南——拿账号、建项目、Work 与 Code 两个工作面、自己安装 R 与 Octave、文件搬进搬出。不需要懂服务器，一个浏览器就够。</p>
     </li>
+    <li>
+      <a href="./workflow/zh.html">人机交互工作流架构</a>（<a href="./workflow/en.html">English</a>）
+      <p class="item-note">简介：AI 辅助实证经济学的治理框架——从选题到复现的 9 个阶段中人类判断与 AI 执行的分工，以及 IRP 治理检查点。可点击各阶段卡片展开详情。</p>
+    </li>
   </ul>
 </section>
 
@@ -151,6 +155,10 @@
     <li>
       <a href="./cometrics/guide/">Co.Metrics User Manual</a>
       <p class="item-note">Summary: A getting-started guide for users — accounts, projects, the Work and Code panels, installing R and Octave yourself, and moving files in and out. No server knowledge needed; a browser is enough.</p>
+    </li>
+    <li>
+      <a href="./workflow/en.html">Human–AI Workflow Architecture</a> (<a href="./workflow/zh.html">中文</a>)
+      <p class="item-note">Summary: A governance framework for AI-assisted empirical economics — the division of labor between human judgment and AI execution across 9 research stages, with IRP governance checkpoints. Click any stage card for details.</p>
     </li>
   </ul>
 </section>

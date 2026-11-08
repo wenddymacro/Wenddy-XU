@@ -1,0 +1,583 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>人机交互工作流架构</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.4/babel.min.js"></script>
+<style>body{margin:0;background:#ffffff}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+
+const stages = [
+  {
+    id: 0,
+    label: "阶段 0",
+    title: "认识\n品味",
+    icon: "◈",
+    human: ["提出研究问题", "识别直觉", "威胁评估", "零结果的解读"],
+    ai: [],
+    humanPct: 100,
+    tag: "强制门控",
+    tagColor: "#dc2626",
+    desc: "不使用 AI。在接触任何数据或 AI 之前，研究者须亲笔回答 4 个必答问题。",
+    checkpoint: "你能用一句话向非经济学者讲清楚你的识别策略吗？",
+  },
+  {
+    id: 1,
+    label: "阶段 1",
+    title: "选题构思",
+    icon: "◉",
+    human: ["问题选择与重要性判断", "文献判断", "研究设计品味"],
+    ai: ["文献检索", "政策时间线整理", "相关论文摘要"],
+    humanPct: 70,
+    tag: "人类主导",
+    tagColor: "#2563eb",
+    desc: "AI 加速检索；研究问题由研究者掌握。",
+    checkpoint: null,
+  },
+  {
+    id: 2,
+    label: "阶段 2",
+    title: "设计与\n可行性",
+    icon: "◎",
+    human: ["识别策略", "制度背景知识", "外生性论证", "威胁诊断"],
+    ai: ["数据可得性检查", "初步数据获取", "估计量实现草稿"],
+    humanPct: 75,
+    tag: "分析框架",
+    tagColor: "#7c3aed",
+    desc: "写下分析框架条款。识别逻辑必须以研究者自己的语言表述。",
+    checkpoint: "条件 1：方法—数据框架是否完成？",
+  },
+  {
+    id: 3,
+    label: "阶段 3",
+    title: "数据\n整理",
+    icon: "⬡",
+    human: ["数据来源层级设计", "制度边界判定", "编码规则验证", "5–10% 抽样审核"],
+    ai: ["系统化提取（DRIL）", "原文引证记录", "缺失记录", "跨轮次一致性检查"],
+    humanPct: 35,
+    tag: "AI 主导",
+    tagColor: "#059669",
+    desc: "DRIL 架构：冻结协议、引证框架、显式缺失记录。由人工抽样审核。",
+    checkpoint: "条件 2：数据审核是否完成？平行趋势图是否已画？",
+  },
+  {
+    id: 4,
+    label: "阶段 4",
+    title: "核心\n分析",
+    icon: "◆",
+    human: ["主设定选择（预先承诺）", "假设检验", "聚类层级论证", "结果解读"],
+    ai: ["估计量实现", "代码生成与调试", "输出格式化", "标准误计算"],
+    humanPct: 50,
+    tag: "预先承诺",
+    tagColor: "#7c3aed",
+    desc: "首次运行前在条件 3 中锁定主设定。AI 执行，研究者解读。",
+    checkpoint: "条件 3：预先承诺声明是否已锁定？",
+  },
+  {
+    id: 5,
+    label: "阶段 5",
+    title: "稳健性\n与拓展",
+    icon: "◇",
+    human: ["确定有意义的检验", "裁决相互冲突的结果", "标注探索性分析"],
+    ai: ["执行预先设定的检验", "子样本分析代码", "敏感性表格生成"],
+    humanPct: 40,
+    tag: "AI 辅助",
+    tagColor: "#059669",
+    desc: "本阶段只运行预先设定的稳健性检验；事后追加的检验一律标为探索性分析。",
+    checkpoint: null,
+  },
+  {
+    id: 6,
+    label: "阶段 6",
+    title: "论文写作",
+    icon: "✦",
+    human: ["全部因果论断", "识别论证", "机制解读", "贡献陈述"],
+    ai: ["系数描述", "图表格式化", "参考文献格式化", "仅限行内编辑批注"],
+    humanPct: 65,
+    tag: "只批注不改写",
+    tagColor: "#b45309",
+    desc: "AI 只对研究者的草稿做批注，绝不改写因果论断或识别逻辑。",
+    checkpoint: "不借助 AI 输出，你能为每一段辩护吗？",
+  },
+  {
+    id: 7,
+    label: "阶段 7",
+    title: "审稿\n与修改",
+    icon: "◑",
+    human: ["回复策略决策", "审稿意见优先级判断", "识别策略辩护"],
+    ai: ["将审稿意见拆解为任务", "构建依赖关系 DAG", "标注审稿人之间的冲突"],
+    humanPct: 55,
+    tag: "AI 辅助",
+    tagColor: "#059669",
+    desc: "策略性修改技能将 R&R 任务结构化；修改策略由研究者掌握。",
+    checkpoint: null,
+  },
+  {
+    id: 8,
+    label: "阶段 8",
+    title: "传播\n与复现",
+    icon: "○",
+    human: ["透明度标准判断", "复现包整理"],
+    ai: ["复现脚本生成", "可视化润色", "README 起草"],
+    humanPct: 30,
+    tag: "AI 主导",
+    tagColor: "#059669",
+    desc: "从原始数据到全部图表的完整复现包，便于他人进行对抗性重跑。",
+    checkpoint: null,
+  },
+];
+
+const irpComponents = [
+  { label: "零阶段", color: "#dc2626", stages: [0] },
+  { label: "分析框架", color: "#7c3aed", stages: [2, 3, 4] },
+  { label: "只批注，不改写", color: "#b45309", stages: [6] },
+  { label: "独立审核", color: "#0891b2", stages: [2, 4, 6] },
+];
+
+const tagColors = {
+  "强制门控": { bg: "#fee2e2", border: "#dc2626", text: "#991b1b" },
+  "人类主导": { bg: "#dbeafe", border: "#2563eb", text: "#1e40af" },
+  "分析框架": { bg: "#ede9fe", border: "#7c3aed", text: "#5b21b6" },
+  "AI 主导": { bg: "#d1fae5", border: "#059669", text: "#065f46" },
+  "预先承诺": { bg: "#ede9fe", border: "#7c3aed", text: "#5b21b6" },
+  "AI 辅助": { bg: "#d1fae5", border: "#059669", text: "#065f46" },
+  "只批注不改写": { bg: "#fef3c7", border: "#b45309", text: "#92400e" },
+};
+
+function WorkflowDiagram() {
+  const [selected, setSelected] = useState(null);
+  const [hoveredStage, setHoveredStage] = useState(null);
+
+  const active = selected !== null ? stages[selected] : null;
+
+  return (
+    <div style={{
+      fontFamily: "'Georgia', 'Songti SC', 'Noto Serif SC', 'STSong', serif",
+      background: "#ffffff",
+      minHeight: "100vh",
+      color: "#1e293b",
+      padding: "32px 24px",
+    }}>
+
+      {/* Header */}
+      <div style={{ textAlign: "center", marginBottom: 36 }}>
+        <div style={{
+          display: "inline-block",
+          background: "linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%)",
+          border: "1px solid #bfdbfe",
+          borderRadius: 12,
+          padding: "24px 48px",
+          marginBottom: 12,
+        }}>
+          <h1 style={{ margin: 0, fontSize: 26, fontWeight: "normal", color: "#0f172a", letterSpacing: -0.5 }}>
+            人机交互工作流架构
+          </h1>
+          <div style={{ marginTop: 8, fontSize: 13, color: "#475569", fontStyle: "italic" }}>
+            AI 辅助实证经济学 · 治理框架
+          </div>
+          <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid #dbeafe", maxWidth: 520, margin: "10px auto 0", fontSize: 11, color: "#64748b", lineHeight: 1.6 }}>
+            参考文献：Xu, Wenli (2026). <i>AI-Assisted Empirical Economics: A Governance Framework for the Age of Vibe Econometrics</i>. Working Paper, City University of Macau.
+          </div>
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div style={{
+        display: "flex", gap: 24, justifyContent: "center",
+        marginBottom: 28, flexWrap: "wrap",
+      }}>
+        {[
+          { color: "#3b82f6", label: "人类判断（不贬值技能）" },
+          { color: "#10b981", label: "AI 执行（贬值技能）" },
+          { color: "#8b5cf6", label: "IRP 治理检查点" },
+          { color: "#f59e0b", label: "强制门控 / 预先承诺" },
+        ].map(l => (
+          <div key={l.label} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12 }}>
+            <div style={{ width: 12, height: 12, borderRadius: 2, background: l.color, flexShrink: 0 }} />
+            <span style={{ color: "#475569" }}>{l.label}</span>
+          </div>
+        ))}
+      </div>
+
+
+      {/* Main Pipeline */}
+      <div style={{ overflowX: "auto", paddingBottom: 8 }}>
+        <div style={{ minWidth: 900 }}>
+
+          {/* Stage cards row */}
+          <div style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
+
+            {/* Y-axis labels */}
+            <div style={{
+              width: 72, flexShrink: 0,
+              display: "flex", flexDirection: "column", justifyContent: "space-between",
+              paddingTop: 4, paddingBottom: 4,
+            }}>
+              <div style={{ fontSize: 10, color: "#3b82f6", textAlign: "right", paddingRight: 8 }}>人类</div>
+              <div style={{ fontSize: 10, color: "#64748b", textAlign: "right", paddingRight: 8 }}>分工</div>
+              <div style={{ fontSize: 10, color: "#10b981", textAlign: "right", paddingRight: 8 }}>AI</div>
+            </div>
+
+            {stages.map((stage, i) => {
+              const tc = tagColors[stage.tag] || { bg: "#0f172a", border: "#475569", text: "#374151" };
+              const isSelected = selected === i;
+              const isHovered = hoveredStage === i;
+
+              return (
+                <div
+                  key={i}
+                  onClick={() => setSelected(isSelected ? null : i)}
+                  onMouseEnter={() => setHoveredStage(i)}
+                  onMouseLeave={() => setHoveredStage(null)}
+                  style={{
+                    flex: 1,
+                    minWidth: 88,
+                    cursor: "pointer",
+                    borderRadius: 10,
+                    border: `2px solid ${isSelected ? "#f59e0b" : isHovered ? "#94a3b8" : "#e2e8f0"}`,
+                    background: isSelected
+                      ? "linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%)"
+                      : "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)",
+                    transition: "all 0.18s ease",
+                    transform: isSelected ? "translateY(-2px)" : "none",
+                    boxShadow: isSelected ? "0 8px 24px rgba(245,158,11,0.15)" : "none",
+                    overflow: "hidden",
+                    display: "flex", flexDirection: "column",
+                  }}
+                >
+                  {/* Stage header */}
+                  <div style={{
+                    padding: "8px 10px 6px",
+                    borderBottom: "1px solid #e2e8f0",
+                    background: stage.id === 0 ? "rgba(220,38,38,0.15)" : "#f8fafc",
+                  }}>
+                    <div style={{ fontSize: 10, color: "#64748b", letterSpacing: 1 }}>{stage.label}</div>
+                    <div style={{ fontSize: 18, lineHeight: 1, marginTop: 2 }}>{stage.icon}</div>
+                    <div style={{
+                      fontSize: 11, fontWeight: "bold", color: "#1e293b",
+                      marginTop: 4, lineHeight: 1.3,
+                      whiteSpace: "pre-line",
+                      minHeight: "2.6em",
+                    }}>
+                      {stage.title}
+                    </div>
+                  </div>
+
+                  {/* Human/AI split bar */}
+                  <div style={{ padding: "6px 10px 2px" }}>
+                    <div style={{
+                      height: 6, borderRadius: 3,
+                      background: `linear-gradient(90deg, #3b82f6 ${stage.humanPct}%, #10b981 ${stage.humanPct}%)`,
+                      opacity: 0.85,
+                    }} />
+                    <div style={{
+                      display: "flex", justifyContent: "space-between",
+                      marginTop: 2, fontSize: 9, color: "#64748b",
+                    }}>
+                      <span style={{ color: "#2563eb" }}>{stage.humanPct}%</span>
+                      <span style={{ color: "#059669" }}>{100 - stage.humanPct}%</span>
+                    </div>
+                  </div>
+
+                  {/* Tag */}
+                  <div style={{ padding: "4px 10px 6px" }}>
+                    <div style={{
+                      display: "inline-block",
+                      padding: "2px 6px",
+                      borderRadius: 4,
+                      fontSize: 8,
+                      fontWeight: "bold",
+                      letterSpacing: 0.5,
+                      background: tc.bg,
+                      color: tc.text,
+                      border: `1px solid ${tc.border}`,
+                      opacity: 0.9,
+                    }}>
+                      {stage.tag}
+                    </div>
+                  </div>
+
+                  {/* Checkpoint indicator */}
+                  {stage.checkpoint && (
+                    <div style={{
+                      margin: "0 10px 6px",
+                      padding: "4px 6px",
+                      borderRadius: 4,
+                      background: "rgba(245,158,11,0.12)",
+                      border: "1px solid rgba(245,158,11,0.3)",
+                      fontSize: 9,
+                      color: "#b45309",
+                      lineHeight: 1.4,
+                    }}>
+                      ⬡ {stage.checkpoint.length > 60 ? stage.checkpoint.slice(0, 57) + "…" : stage.checkpoint}
+                    </div>
+                  )}
+
+                  {/* Expand hint */}
+                  <div style={{
+                    marginTop: "auto",
+                    padding: "4px 10px 6px",
+                    fontSize: 9,
+                    color: isSelected ? "#f59e0b" : "#94a3b8",
+                    textAlign: "center",
+                  }}>
+                    {isSelected ? "▲ 收起" : "▼ 详情"}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Flow arrows between stages */}
+          <div style={{ display: "flex", alignItems: "center", paddingLeft: 80, marginTop: 4, gap: 6 }}>
+            {stages.map((_, i) => (
+              <div key={i} style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                {i < stages.length - 1 && (
+                  <div style={{ fontSize: 16, color: "#94a3b8" }}>→</div>
+                )}
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
+      {/* Detail panel */}
+      {active && (
+        <div style={{
+          marginTop: 20,
+          background: "#ffffff",
+          border: "1px solid #f59e0b",
+          borderRadius: 12,
+          padding: 24,
+          animation: "fadeIn 0.2s ease",
+        }}>
+          <style>{`@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }`}</style>
+
+          <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
+
+            {/* Stage info */}
+            <div style={{ flex: "0 0 220px" }}>
+              <div style={{ fontSize: 11, color: "#64748b", letterSpacing: 2, marginBottom: 4 }}>
+                {active.label} · {active.icon}
+              </div>
+              <div style={{ fontSize: 20, fontWeight: "bold", color: "#0f172a", whiteSpace: "pre-line", lineHeight: 1.3 }}>
+                {active.title}
+              </div>
+              <div style={{ marginTop: 12, fontSize: 13, color: "#475569", lineHeight: 1.6 }}>
+                {active.desc}
+              </div>
+
+              {/* Split visualization */}
+              <div style={{ marginTop: 16 }}>
+                <div style={{ fontSize: 11, color: "#64748b", marginBottom: 6 }}>技能负荷</div>
+                <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: 10, color: "#2563eb", marginBottom: 3 }}>人类 {active.humanPct}%</div>
+                    <div style={{ height: 8, borderRadius: 4, background: "#e2e8f0" }}>
+                      <div style={{ height: "100%", width: `${active.humanPct}%`, borderRadius: 4, background: "linear-gradient(90deg, #2563eb, #2563eb)" }} />
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 4 }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: 10, color: "#059669", marginBottom: 3 }}>AI {100 - active.humanPct}%</div>
+                    <div style={{ height: 8, borderRadius: 4, background: "#e2e8f0" }}>
+                      <div style={{ height: "100%", width: `${100 - active.humanPct}%`, borderRadius: 4, background: "linear-gradient(90deg, #059669, #059669)" }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Human tasks */}
+            <div style={{ flex: 1, minWidth: 180 }}>
+              <div style={{
+                fontSize: 11, letterSpacing: 2, color: "#3b82f6",
+                textTransform: "uppercase", marginBottom: 10,
+                display: "flex", alignItems: "center", gap: 6,
+              }}>
+                <div style={{ width: 8, height: 8, borderRadius: 2, background: "#3b82f6" }} />
+                人类判断（不贬值技能）
+              </div>
+              {active.human.length > 0 ? active.human.map((t, i) => (
+                <div key={i} style={{
+                  display: "flex", alignItems: "flex-start", gap: 8,
+                  marginBottom: 8, fontSize: 13, color: "#334155", lineHeight: 1.5,
+                }}>
+                  <div style={{
+                    width: 18, height: 18, borderRadius: "50%",
+                    background: "rgba(59,130,246,0.15)", border: "1px solid #3b82f6",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 9, color: "#2563eb", flexShrink: 0, marginTop: 1,
+                  }}>H</div>
+                  {t}
+                </div>
+              )) : (
+                <div style={{ fontSize: 13, color: "#ef4444", fontStyle: "italic" }}>
+                  ✕ 不使用 AI，仅由人完成。
+                </div>
+              )}
+            </div>
+
+            {/* AI tasks */}
+            <div style={{ flex: 1, minWidth: 180 }}>
+              <div style={{
+                fontSize: 11, letterSpacing: 2, color: "#10b981",
+                textTransform: "uppercase", marginBottom: 10,
+                display: "flex", alignItems: "center", gap: 6,
+              }}>
+                <div style={{ width: 8, height: 8, borderRadius: 2, background: "#10b981" }} />
+                AI 执行（贬值技能）
+              </div>
+              {active.ai.length > 0 ? active.ai.map((t, i) => (
+                <div key={i} style={{
+                  display: "flex", alignItems: "flex-start", gap: 8,
+                  marginBottom: 8, fontSize: 13, color: "#334155", lineHeight: 1.5,
+                }}>
+                  <div style={{
+                    width: 18, height: 18, borderRadius: "50%",
+                    background: "rgba(16,185,129,0.15)", border: "1px solid #10b981",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 9, color: "#059669", flexShrink: 0, marginTop: 1,
+                  }}>A</div>
+                  {t}
+                </div>
+              )) : (
+                <div style={{ fontSize: 13, color: "#475569", fontStyle: "italic" }}>
+                  — 本阶段 AI 不参与
+                </div>
+              )}
+            </div>
+
+            {/* Checkpoint */}
+            {active.checkpoint && (
+              <div style={{ flex: "0 0 220px" }}>
+                <div style={{ fontSize: 11, letterSpacing: 2, color: "#f59e0b", textTransform: "uppercase", marginBottom: 10 }}>
+                  IRP 检查点
+                </div>
+                <div style={{
+                  background: "rgba(245,158,11,0.08)",
+                  border: "1px solid rgba(245,158,11,0.4)",
+                  borderRadius: 8,
+                  padding: 12,
+                  fontSize: 12, color: "#92400e", lineHeight: 1.6,
+                }}>
+                  <div style={{ marginBottom: 6, fontSize: 16 }}>⬡</div>
+                  {active.checkpoint}
+                </div>
+                <div style={{ marginTop: 8, fontSize: 11, color: "#64748b", lineHeight: 1.5 }}>
+                  未通过该检查点，须退回研究设计阶段，或将研究重新定位为描述性分析。
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* IRP Components banner */}
+      <div style={{ marginTop: 24 }}>
+        <div style={{ fontSize: 11, letterSpacing: 3, color: "#64748b", textTransform: "uppercase", textAlign: "center", marginBottom: 12 }}>
+          IRP 治理层
+        </div>
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+          {[
+            {
+              label: "零阶段",
+              sub: "认识品味",
+              color: "#dc2626",
+              bg: "rgba(220,38,38,0.08)",
+              desc: "4 个问题，亲笔作答，不用 AI。一切工作的前提。",
+              icon: "◈",
+            },
+            {
+              label: "分析框架",
+              sub: "3 项前置条件",
+              color: "#7c3aed",
+              bg: "rgba(124,58,237,0.08)",
+              desc: "方法—数据框架 · 数据审核 · 预先承诺声明",
+              icon: "◈",
+            },
+            {
+              label: "只批注，不改写",
+              sub: "写作原则",
+              color: "#b45309",
+              bg: "rgba(180,83,9,0.08)",
+              desc: "AI 只插入行内批注；全部因果论断由研究者执笔。",
+              icon: "✦",
+            },
+            {
+              label: "独立审核",
+              sub: "对抗性审计",
+              color: "#0891b2",
+              bg: "rgba(8,145,178,0.08)",
+              desc: "发布前进行对抗性 AI 审查或同行代码审计。",
+              icon: "◑",
+            },
+          ].map(c => (
+            <div key={c.label} style={{
+              flex: "1 1 200px", maxWidth: 260,
+              background: c.bg,
+              border: `1px solid ${c.color}44`,
+              borderRadius: 10,
+              padding: "14px 16px",
+            }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                <div style={{ fontSize: 16, color: c.color }}>{c.icon}</div>
+                <div>
+                  <div style={{ fontSize: 13, fontWeight: "bold", color: c.color }}>{c.label}</div>
+                  <div style={{ fontSize: 10, color: "#64748b" }}>{c.sub}</div>
+                </div>
+              </div>
+              <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.6 }}>{c.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Skill depreciation legend */}
+      <div style={{
+        marginTop: 20,
+        background: "#f8fafc",
+        border: "1px solid #e2e8f0",
+        borderRadius: 10,
+        padding: "16px 24px",
+        display: "flex", gap: 48, flexWrap: "wrap", justifyContent: "center",
+      }}>
+        <div>
+          <div style={{ fontSize: 11, color: "#3b82f6", letterSpacing: 2, marginBottom: 8 }}>不贬值技能（人类）</div>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            {["问题品味", "识别可信度", "制度背景知识", "论证迭代"].map(s => (
+              <span key={s} style={{
+                fontSize: 11, color: "#334155",
+                background: "rgba(59,130,246,0.08)",
+                border: "1px solid rgba(59,130,246,0.2)",
+                borderRadius: 4, padding: "3px 8px",
+              }}>{s}</span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div style={{ fontSize: 11, color: "#10b981", letterSpacing: 2, marginBottom: 8 }}>贬值技能（AI）</div>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            {["编程", "数据整理", "文字生成", "文献检索"].map(s => (
+              <span key={s} style={{
+                fontSize: 11, color: "#334155",
+                background: "rgba(16,185,129,0.08)",
+                border: "1px solid rgba(16,185,129,0.2)",
+                borderRadius: 4, padding: "3px 8px",
+              }}>{s}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div style={{ textAlign: "center", marginTop: 20, fontSize: 11, color: "#94a3b8" }}>
+        点击任一阶段卡片展开详情 · IRP：AI 辅助实证经济学整合研究协议
+      </div>
+
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<WorkflowDiagram/>);
+</script></body></html>
